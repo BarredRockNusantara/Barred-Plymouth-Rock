@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Barred Plymouth Rock</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#06110b;
+    color:white;
+}
+
+/* MENU */
+nav{
+    position:fixed;
+    top:15px;
+    left:4%;
+    right:4%;
+    z-index:99;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:16px 20px;
+
+    background:rgba(3,12,7,.78);
+    backdrop-filter:blur(18px);
+
+    border:1px solid #e7c85b66;
+    border-radius:20px;
+}
+
+.logo{
+    color:#f2ce61;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:11px;
+    margin-left:12px;
+}
+
+/* HALAMAN DEPAN */
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:120px 20px 70px;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        rgba(2,8,5,.48),
+        rgba(2,8,5,.88)
+    ),
+    url("ayam-barred-rock.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at center,
+        transparent,
+        #020603aa 75%
+    );
+}
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    max-width:900px;
+}
+
+.badge{
+    display:inline-block;
+
+    padding:9px 20px;
+
+    border:1px solid #f1d06b;
+    border-radius:50px;
+
+    color:#f1d06b;
+
+    font-size:10px;
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+}
+
+h1{
+    font-size:clamp(45px,10vw,90px);
+    line-height:.95;
+
+    background:
+    linear-gradient(
+        90deg,
+        #ffffff,
+        #61e6a0,
+        #f3d067,
+        #61cfff,
+        #ffffff
+    );
+
+    background-size:300%;
+
+    -webkit-background-clip:text;
+    color:transparent;
+
+    animation:warna 6s linear infinite;
+}
+
+@keyframes warna{
+    from{
+        background-position:0%;
+    }
+    to{
+        background-position:300%;
+    }
+}
+
+.hero h2{
+    margin-top:22px;
+
+    font-size:13px;
+    letter-spacing:4px;
+
+    color:#e7eee9;
+}
+
+.hero p{
+    max-width:650px;
+
+    margin:25px auto;
+
+    color:#d1d9d4;
+
+    line-height:1.8;
+}
+
+.btn{
+    display:inline-block;
+
+    padding:15px 30px;
+
+    border-radius:50px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #f5d875,
+        #c59630,
+        #57d997
+    );
+
+    color:#111;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    box-shadow:0 10px 40px #0008;
+
+    transition:.4s;
+}
+
+.btn:hover{
+    transform:translateY(-5px);
+}
+
+/* BAGIAN */
+section{
+    padding:90px 6%;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title small{
+    color:#62e3a0;
+    letter-spacing:4px;
+    font-size:10px;
+}
+
+.title h2{
+    margin-top:10px;
+
+    font-size:38px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #fff,
+        #f1cd62,
+        #61e3a0,
+        #62cfff
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+/* KARTU */
+.cards{
+    max-width:1100px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    gap:22px;
+}
+
+.card{
+    padding:30px;
+
+    min-height:220px;
+
+    border-radius:25px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #123c27,
+        #07100b
+    );
+
+    border:1px solid #5ee39b55;
+
+    box-shadow:0 20px 50px #0008;
+
+    transition:.4s;
+}
+
+.card:nth-child(2){
+    background:
+    linear-gradient(
+        145deg,
+        #3b3011,
+        #0b0d08
+    );
+
+    border-color:#e6c75b66;
+}
+
+.card:nth-child(3){
+    background:
+    linear-gradient(
+        145deg,
+        #0c3443,
+        #06100d
+    );
+
+    border-color:#60d8ff66;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+}
+
+.icon{
+    font-size:42px;
+    margin-bottom:17px;
+}
+
+.card h3{
+    color:#f0ce66;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#c0cbc4;
+    font-size:13px;
+    line-height:1.8;
+}
+
+/* PROFIL */
+.profile{
+    max-width:850px;
+    margin:auto;
+
+    padding:30px;
+
+    border-radius:28px;
+
+    background:
+    linear-gradient(
+        135deg,
+        #123d28,
+        #102e40,
+        #211909
+    );
+
+    border:1px solid #e4c55b55;
+
+    box-shadow:0 25px 70px #000;
+}
+
+.row{
+    display:flex;
+    justify-content:space-between;
+
+    padding:18px 5px;
+
+    border-bottom:1px solid #ffffff18;
+}
+
+.row:last-child{
+    border-bottom:none;
+}
+
+.row span:first-child{
+    color:#9eaaa3;
+}
+
+.row span:last-child{
+    color:#f1ce65;
+    font-weight:bold;
+}
+
+/* KATA-KATA */
+.quote{
+    padding:110px 20px;
+
+    text-align:center;
+
+    background:
+    radial-gradient(
+        circle,
+        #17663d,
+        #073448,
+        #030705 70%
+    );
+}
+
+.quote h2{
+    font-size:clamp(30px,7vw,60px);
+
+    background:
+    linear-gradient(
+        90deg,
+        #f4d26a,
+        white,
+        #60e29d,
+        #62ceff
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.quote p{
+    margin-top:15px;
+    color:#c3cec7;
+}
+
+/* KONTAK */
+.contact{
+    text-align:center;
+}
+
+.social{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.social a{
+    padding:14px 22px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#10291b;
+
+    border:1px solid #e4c55c66;
+
+    transition:.3s;
+}
+
+.social a:hover{
+    background:#e4c55c;
+    color:#111;
+}
+
+/* FOOTER */
+footer{
+    padding:40px 20px;
+
+    text-align:center;
+
+    color:#7d8981;
+
+    border-top:1px solid #ffffff12;
+
+    font-size:11px;
+}
+
+footer strong{
+    color:#e5c65e;
+}
+
+/* HP */
+@media(max-width:750px){
+
+    nav{
+        padding:14px;
+    }
+
+    .logo{
+        font-size:12px;
+    }
+
+    nav a{
+        font-size:8px;
+        margin-left:5px;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero h2{
+        font-size:9px;
+        letter-spacing:2px;
+    }
+
+    section{
+        padding:70px 5%;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .title h2{
+        font-size:30px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">🐔 BARRED ROCK</div>
+
+    <div>
+        <a href="#home">HOME</a>
+        <a href="#ciri">CIRI</a>
+        <a href="#profil">PROFIL</a>
+    </div>
+</nav>
+
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            PREMIUM POULTRY • INDONESIA 🇮🇩
+        </div>
+
+        <h1>
+            BARRED<br>
+            PLYMOUTH ROCK
+        </h1>
+
+        <h2>
+            CANTIK • KUAT • BERKARAKTER
+        </h2>
+
+        <p>
+            Selamat datang di dunia Barred Plymouth Rock.
+            Ayam dengan bulu hitam dan putih yang khas,
+            tubuh kokoh, dan penampilan yang menarik.
+        </p>
+
+        <a href="#ciri" class="btn">
+            ✨ LIHAT CIRI KHAS
+        </a>
+
+    </div>
+
+</section>
+
+
+<section id="ciri">
+
+    <div class="title">
+        <small>CIRI KHAS</small>
+        <h2>Yang Membuatnya Istimewa</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="icon">🐔</div>
+
+            <h3>Bulu Bergaris</h3>
+
+            <p>
+                Bulu hitam dan putih bergaris
+                adalah ciri khas utama
+                Barred Plymouth Rock.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">👑</div>
+
+            <h3>Terlihat Elegan</h3>
+
+            <p>
+                Pola bulunya membuat ayam ini
+                terlihat cantik, unik,
+                dan menarik.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">💪</div>
+
+            <h3>Tubuh Kokoh</h3>
+
+            <p>
+                Tubuhnya besar dan kuat,
+                sehingga terlihat gagah.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🥚</div>
+
+            <h3>Ayam Dwiguna</h3>
+
+            <p>
+                Dapat dipelihara untuk
+                menghasilkan telur dan
+                juga daging.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">🌿</div>
+
+            <h3>Mudah Dirawat</h3>
+
+            <p>
+                Pakan yang baik, air bersih,
+                dan kandang yang nyaman
+                sangat penting.
+            </p>
+        </div>
+
+
+        <div class="card">
+            <div class="icon">⭐</div>
+
+            <h3>Kualitas</h3>
+
+            <p>
+                Indukan yang bagus dan
+                perawatan yang baik membantu
+                menghasilkan ayam berkualitas.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="profil">
+
+    <div class="title">
+
+        <small>PROFIL</small>
+
+        <h2>Informasi Ayam</h2>
+
+    </div>
+
+    <div class="profile">
+
+        <div class="row">
+            <span>Nama</span>
+            <span>Barred Plymouth Rock</span>
+        </div>
+
+        <div class="row">
+            <span>Warna</span>
+            <span>Hitam & Putih</span>
+        </div>
+
+        <div class="row">
+            <span>Jenis</span>
+            <span>Ayam Dwiguna</span>
+        </div>
+
+        <div class="row">
+            <span>Ciri Utama</span>
+            <span>Bulu Bergaris</span>
+        </div>
+
+        <div class="row">
+            <span>Karakter</span>
+            <span>Aktif & Cukup Tenang</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="quote">
+
+    <h2>
+        “Keindahan Dalam Setiap Garis.”
+    </h2>
+
+    <p>
+        Barred Plymouth Rock — cantik,
+        kuat, dan penuh karakter.
+    </p>
+
+</div>
+
+
+<section class="contact">
+
+    <div class="title">
+
+        <small>MEDIA SOSIAL</small>
+
+        <h2>Ikuti Kami</h2>
+
+    </div>
+
+    <div class="social">
+
+        <a href="#">
+            📘 Facebook
+        </a>
+
+        <a href="#">
+            💬 WhatsApp
+        </a>
+
+        <a href="#">
+            📸 Instagram
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026
+    <strong>BARRED PLYMOUTH ROCK</strong>
+
+    <br><br>
+
+    Premium Poultry • Indonesia 🇮🇩 by sobat shamo
+
+</footer>
+
+</body>
+</html>
