@@ -714,3 +714,1406 @@ footer strong{
 
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030805">
+
+<title>BARRED ROCK — Heritage Poultry Indonesia</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020604;
+    color:#f5f0df;
+    font-family:Montserrat,Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:25px 18px 80px;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(0,0,0,.52),
+        rgba(0,8,4,.78) 70%,
+        #020604 100%
+    ),
+    url("barred-rock.jpg") center/cover;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+    background:
+    radial-gradient(
+        circle at 50% 42%,
+        rgba(215,174,63,.12),
+        transparent 30%
+    ),
+    linear-gradient(
+        90deg,
+        rgba(2,6,4,.5),
+        transparent 50%,
+        rgba(2,6,4,.5)
+    );
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.15;
+
+    background-image:
+    radial-gradient(
+        #f3cf68 .7px,
+        transparent .7px
+    );
+
+    background-size:24px 24px;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav{
+    width:min(100%,1160px);
+    height:82px;
+    padding:0 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border:1px solid rgba(232,194,83,.7);
+    border-radius:50px;
+
+    background:rgba(2,9,5,.72);
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 0 0 1px rgba(255,255,255,.03) inset,
+    0 18px 50px #0008;
+
+    position:relative;
+    z-index:3;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#f0cb63;
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:4px;
+}
+
+.logo{
+    width:38px;
+    height:38px;
+
+    border:1px solid #dcb84f;
+    border-radius:50%;
+
+    display:grid;
+    place-items:center;
+
+    font-size:20px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #171f16,
+        #050806
+    );
+
+    box-shadow:
+    0 0 18px #d9b84f22;
+}
+
+.links{
+    display:flex;
+    gap:28px;
+}
+
+.links a{
+    color:#e9e9e4;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.links a:hover{
+    color:#f1cc65;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    width:min(100%,1000px);
+    text-align:center;
+
+    position:relative;
+    z-index:2;
+
+    margin-top:105px;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+
+    padding:12px 28px;
+
+    border:1px solid #d9b84f;
+    border-radius:40px;
+
+    color:#e8c75f;
+    background:#03080599;
+
+    letter-spacing:4px;
+    font-size:11px;
+    font-weight:700;
+
+    box-shadow:
+    0 0 25px #d9b84f12;
+}
+
+.eyebrow:before,
+.eyebrow:after{
+    content:"";
+
+    width:28px;
+    height:1px;
+
+    background:#d9b84f;
+}
+
+.small-title{
+    margin-top:45px;
+
+    color:#d7bd6a;
+
+    font-family:"Cormorant Garamond",serif;
+
+    letter-spacing:12px;
+    font-size:18px;
+
+    text-transform:uppercase;
+}
+
+/* ================= TITLE ================= */
+
+h1{
+    margin-top:3px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(70px,13vw,145px);
+
+    line-height:.75;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#eee8d5;
+
+    text-shadow:
+    0 7px 30px #000,
+    0 0 45px #d7b74a18;
+}
+
+h1 span{
+    color:#83edb1;
+
+    background:
+    linear-gradient(
+        90deg,
+        #dfffe9,
+        #72e9a3,
+        #dfffe9
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+/* ================= DECORATION ================= */
+
+.divider{
+    width:160px;
+    height:1px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #d7b74d,
+        transparent
+    );
+
+    margin:34px auto 25px;
+}
+
+.motto{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:25px;
+
+    letter-spacing:7px;
+
+    color:#f0cf72;
+
+    text-transform:uppercase;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.desc{
+    max-width:760px;
+
+    margin:32px auto 0;
+
+    color:#e7e5dd;
+
+    font-size:17px;
+
+    line-height:1.9;
+}
+
+/* ================= BUTTON ================= */
+
+.cta-row{
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:38px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:17px 34px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.primary{
+    color:#111;
+
+    background:
+    linear-gradient(
+        110deg,
+        #f0cf67,
+        #b9efc9
+    );
+
+    box-shadow:
+    0 10px 35px #0008;
+}
+
+.secondary{
+    color:#e7c85e;
+
+    border:1px solid #d9b84f;
+
+    background:#03080599;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= LINE ================= */
+
+.luxury-line{
+    position:absolute;
+
+    bottom:25px;
+
+    z-index:2;
+
+    width:min(90%,700px);
+
+    height:1px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #cba949,
+        transparent
+    );
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:105px 22px;
+
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at 50% 0,
+        #18301f55,
+        transparent 45%
+    ),
+    #030805;
+}
+
+.section-inner{
+    max-width:1050px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.overline{
+    color:#d9ba58;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    font-weight:800;
+}
+
+h2{
+    margin:13px 0 18px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:55px;
+
+    color:#f1ead7;
+}
+
+.section-inner > p{
+    max-width:720px;
+
+    margin:auto;
+
+    color:#bfc5bd;
+
+    line-height:1.8;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+}
+
+.card{
+    min-height:210px;
+
+    padding:32px 24px;
+
+    border-radius:24px;
+
+    border:1px solid #c5a84655;
+
+    background:
+    linear-gradient(
+        145deg,
+        #101b13,
+        #050905
+    );
+
+    box-shadow:
+    0 20px 50px #0008;
+
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    border-color:#d9bd5c;
+
+    box-shadow:
+    0 25px 60px #000,
+    0 0 30px #d9bd5c18;
+}
+
+.icon{
+    font-size:30px;
+
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:29px;
+
+    color:#e5c661;
+}
+
+.card p{
+    margin-top:10px;
+
+    color:#aeb6ad;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:35px;
+
+    text-align:center;
+
+    background:#010302;
+
+    color:#777;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:700px){
+
+    .hero{
+        padding:18px 12px 65px;
+
+        background-position:center top;
+    }
+
+    .nav{
+        height:70px;
+
+        padding:0 16px;
+    }
+
+    .brand{
+        font-size:13px;
+        letter-spacing:2px;
+    }
+
+    .logo{
+        width:32px;
+        height:32px;
+        font-size:16px;
+    }
+
+    .links{
+        gap:11px;
+    }
+
+    .links a{
+        font-size:9px;
+        letter-spacing:0;
+    }
+
+    .main{
+        margin-top:100px;
+    }
+
+    .eyebrow{
+        font-size:9px;
+        letter-spacing:2px;
+        padding:10px 15px;
+    }
+
+    .small-title{
+        margin-top:35px;
+        font-size:12px;
+        letter-spacing:7px;
+    }
+
+    h1{
+        font-size:68px;
+        line-height:.82;
+    }
+
+    .motto{
+        font-size:16px;
+        letter-spacing:4px;
+    }
+
+    .desc{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    h2{
+        font-size:45px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HERO ================= -->
+
+<header class="hero" id="home">
+
+<nav class="nav">
+
+    <div class="brand">
+        <div class="logo">🐔</div>
+        BARRED ROCK
+    </div>
+
+    <div class="links">
+        <a href="#show">SHOW</a>
+        <a href="#home">HOME</a>
+        <a href="#ciri">CIRI</a>
+        <a href="#profil">PROFIL</a>
+    </div>
+
+</nav>
+
+<main class="main">
+
+    <div class="eyebrow">
+        PREMIUM POULTRY • INDONESIA 🇮🇩
+    </div>
+
+    <div class="small-title">
+        HERITAGE • STRENGTH • BEAUTY
+    </div>
+
+    <h1>
+        BARRED<br>
+        <span>PLYMOUTH</span><br>
+        ROCK
+    </h1>
+
+    <div class="divider"></div>
+
+    <div class="motto">
+        CANTIK • KUAT • BERKARAKTER
+    </div>
+
+    <p class="desc">
+        Selamat datang di dunia Barred Plymouth Rock —
+        perpaduan pola bulu ikonik, tubuh kokoh,
+        karakter menarik, dan nilai heritage
+        yang membuatnya istimewa.
+    </p>
+
+    <div class="cta-row">
+
+        <a class="btn primary" href="#ciri">
+            ✦ LIHAT CIRI KHAS
+        </a>
+
+        <a class="btn secondary" href="#profil">
+            EXPLORE PROFIL
+        </a>
+
+    </div>
+
+</main>
+
+<div class="luxury-line"></div>
+
+</header>
+
+
+<!-- ================= SHOW ================= -->
+
+<section id="show">
+
+<div class="section-inner">
+
+    <div class="overline">
+        01 — THE HERITAGE
+    </div>
+
+    <h2>
+        Ikonik & Berkelas
+    </h2>
+
+    <p>
+        Barred Plymouth Rock dikenal dengan
+        pola barred hitam-putih yang khas
+        serta bentuk tubuh yang kuat dan proporsional.
+    </p>
+
+</div>
+
+</section>
+
+
+<!-- ================= CIRI ================= -->
+
+<section id="ciri">
+
+<div class="section-inner">
+
+    <div class="overline">
+        02 — SIGNATURE CHARACTER
+    </div>
+
+    <h2>
+        Ciri Khas
+    </h2>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <div class="icon">
+                ✦
+            </div>
+
+            <h3>
+                Barred Pattern
+            </h3>
+
+            <p>
+                Pola garis hitam-putih menjadi
+                identitas visual yang sangat khas.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="icon">
+                ♜
+            </div>
+
+            <h3>
+                Strong Body
+            </h3>
+
+            <p>
+                Tubuh kokoh, berisi,
+                dan memiliki penampilan yang tegas.
+            </p>
+
+        </article>
+
+
+        <article class="card">
+
+            <div class="icon">
+                ♛
+            </div>
+
+            <h3>
+                Good Character
+            </h3>
+
+            <p>
+                Umumnya tenang, adaptif,
+                dan menarik untuk dikembangkan.
+            </p>
+
+        </article>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROFIL ================= -->
+
+<section id="profil">
+
+<div class="section-inner">
+
+    <div class="overline">
+        03 — PREMIUM POULTRY
+    </div>
+
+    <h2>
+        Barred Rock Indonesia
+    </h2>
+
+    <p>
+        Sebuah halaman khusus untuk memperkenalkan
+        Barred Plymouth Rock dengan tampilan modern,
+        elegan, dan berkarakter.
+    </p>
+
+</div>
+
+</section>
+
+
+<footer>
+
+    BARRED ROCK • PREMIUM POULTRY INDONESIA 🇮🇩
+
+</footer>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Barredrock Farm Indonesia</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#07110d;
+    color:white;
+}
+
+/* HEADER */
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+    background:rgba(10,15,13,.90);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid #8f9691;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+    color:#e4e8e5;
+}
+
+.logo span{
+    color:#aeb7b1;
+}
+
+.menu{
+    display:flex;
+    gap:10px;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    padding:10px 15px;
+    border-radius:25px;
+    transition:.3s;
+}
+
+.menu a:hover{
+    background:#aeb7b1;
+    color:#07110d;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:120px 20px 60px;
+
+    background:
+    linear-gradient(rgba(0,20,12,.65),rgba(0,0,0,.82)),
+    url("https://images.unsplash.com/photo-1548550023-2bdb3c5beed7?auto=format&fit=crop&w=1600&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 18px;
+    border:1px solid #bfc5c1;
+    border-radius:30px;
+    color:#d9ddda;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,8vw,82px);
+    line-height:1;
+    color:#e3e7e4;
+    text-shadow:0 4px 20px #000;
+}
+
+.hero h1 span{
+    color:#aeb7b1;
+}
+
+.hero p{
+    font-size:18px;
+    line-height:1.7;
+    margin:25px auto;
+    color:#d7ddd9;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-primary{
+    background:#d5dad7;
+    color:#07110d;
+}
+
+.btn-secondary{
+    border:1px solid #c9cfcc;
+    color:white;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 25px rgba(0,0,0,.4);
+}
+
+/* SECTION */
+section{
+    padding:90px 20px;
+}
+
+.container{
+    max-width:1100px;
+    margin:auto;
+}
+
+.title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.title h2{
+    font-size:38px;
+    color:#dfe4e1;
+}
+
+.title p{
+    color:#aeb7b1;
+    margin-top:10px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:linear-gradient(145deg,#17211c,#0c1511);
+    border:1px solid #3d4842;
+    padding:30px;
+    border-radius:20px;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+    border-color:#b9c0bc;
+}
+
+.icon{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#dfe4e1;
+}
+
+.card p{
+    color:#aeb7b1;
+    line-height:1.6;
+}
+
+/* ABOUT */
+.about{
+    background:#0d1712;
+}
+
+.about-box{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:35px;
+    align-items:center;
+}
+
+.about-text h2{
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.about-text p{
+    color:#b7c0ba;
+    line-height:1.8;
+    margin-bottom:20px;
+}
+
+.about-image{
+    min-height:350px;
+    border-radius:25px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.5)),
+    url("https://images.unsplash.com/photo-1569288052389-dac9b01c9c8b?auto=format&fit=crop&w=1000&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+/* FARM */
+.farm{
+    background:#07110d;
+}
+
+.farm-box{
+    background:linear-gradient(135deg,#17251d,#0b120e);
+    border:1px solid #4b5750;
+    padding:40px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.farm-box h3{
+    font-size:30px;
+    margin-bottom:15px;
+}
+
+.farm-box p{
+    color:#b8c0bb;
+    line-height:1.7;
+}
+
+/* MENU BUTTONS */
+.quick-menu{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:30px;
+}
+
+.quick-menu a{
+    text-decoration:none;
+    color:white;
+    padding:18px;
+    border-radius:15px;
+    background:#202b25;
+    border:1px solid #465149;
+    transition:.3s;
+}
+
+.quick-menu a:hover{
+    background:#c4cbc7;
+    color:#07110d;
+    transform:scale(1.03);
+}
+
+/* CONTACT */
+.contact{
+    background:#101b15;
+    text-align:center;
+}
+
+.contact p{
+    color:#b8c0bb;
+    margin:15px auto 25px;
+    max-width:650px;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:30px 20px;
+    background:#050906;
+    color:#89938c;
+    border-top:1px solid #303a34;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+
+    .menu{
+        display:none;
+    }
+
+    .hero h1{
+        font-size:48px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .about-box{
+        grid-template-columns:1fr;
+    }
+
+    .about-image{
+        min-height:250px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+<div class="navbar">
+
+<div class="logo">
+BARRED<span>ROCK</span> FARM
+</div>
+
+<nav class="menu">
+<a href="#beranda">Beranda</a>
+<a href="#tentang">Tentang</a>
+<a href="#peternakan">Peternakan</a>
+<a href="#perawatan">Perawatan</a>
+<a href="#kontak">Kontak</a>
+</nav>
+
+</div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero" id="beranda">
+
+<div class="hero-content">
+
+<div class="badge">
+🐔 PETERNAKAN BARRED PLYMOUTH ROCK
+</div>
+
+<h1>
+Barredrock<br>
+<span>Farm Indonesia</span>
+</h1>
+
+<p>
+Membangun peternakan Barred Plymouth Rock yang sehat,
+berkualitas dan dikelola dengan perawatan yang baik.
+</p>
+
+<div class="buttons">
+
+<a href="#tentang" class="btn btn-primary">
+Lihat Peternakan
+</a>
+
+<a href="#peternakan" class="btn btn-secondary">
+Jelajahi Farm
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- TENTANG -->
+<section class="about" id="tentang">
+
+<div class="container">
+
+<div class="title">
+<h2>Tentang Barredrock Farm</h2>
+<p>Fokus pada kualitas dan perawatan</p>
+</div>
+
+<div class="about-box">
+
+<div class="about-text">
+
+<h2>Peternakan Barredrock</h2>
+
+<p>
+Barredrock Farm adalah konsep peternakan yang berfokus
+pada pengembangan ayam Barred Plymouth Rock dengan
+manajemen kandang, pakan, kebersihan dan seleksi
+yang teratur.
+</p>
+
+<a href="#perawatan" class="btn btn-primary">
+Lihat Perawatan
+</a>
+
+</div>
+
+<div class="about-image"></div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PETERNAKAN -->
+<section class="farm" id="peternakan">
+
+<div class="container">
+
+<div class="title">
+<h2>Area Peternakan</h2>
+<p>Lingkungan nyaman untuk ayam</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🐔</div>
+<h3>Barred Plymouth Rock</h3>
+<p>
+Ayam dengan pola bulu barred yang menjadi ciri khas
+utama Barred Rock.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🏡</div>
+<h3>Kandang</h3>
+<p>
+Kandang dirancang agar ayam mendapatkan ruang,
+sirkulasi udara dan kebersihan yang baik.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌿</div>
+<h3>Area Hijau</h3>
+<p>
+Lingkungan hijau dengan tanaman dan rumput untuk
+menciptakan suasana peternakan yang alami.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🌾</div>
+<h3>Pakan</h3>
+<p>
+Pemberian pakan disesuaikan dengan umur,
+pertumbuhan dan kebutuhan ayam.
+</p>
+</div>
+
+</div>
+
+
+<div class="quick-menu">
+
+<a href="#perawatan">🩺 Penanganan Penyakit</a>
+
+<a href="#perawatan">🍚 Manajemen Pakan</a>
+
+<a href="#perawatan">🧹 Kebersihan Kandang</a>
+
+<a href="#kontak">📞 Hubungi Farm</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PERAWATAN -->
+<section id="perawatan">
+
+<div class="container">
+
+<div class="title">
+<h2>Perawatan Ayam</h2>
+<p>Dasar pengelolaan Barredrock</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">🍚</div>
+<h3>Pakan</h3>
+<p>
+Gunakan pakan berkualitas sesuai fase pertumbuhan
+dan selalu sediakan air minum bersih.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">💧</div>
+<h3>Air Minum</h3>
+<p>
+Air minum harus bersih dan tersedia setiap hari.
+Tempat minum perlu dibersihkan secara rutin.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🧹</div>
+<h3>Kebersihan</h3>
+<p>
+Jaga kebersihan kandang, tempat pakan dan tempat
+minum untuk mengurangi risiko penyakit.
+</p>
+</div>
+
+<div class="card">
+<div class="icon">🔎</div>
+<h3>Observasi</h3>
+<p>
+Perhatikan nafsu makan, kotoran, aktivitas,
+bulu dan kondisi tubuh ayam setiap hari.
+</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- KONTAK -->
+<section class="contact" id="kontak">
+
+<div class="container">
+
+<div class="title">
+<h2>Barredrock Farm</h2>
+<p>Peternakan Barred Plymouth Rock Indonesia</p>
+</div>
+
+<p>
+Selamat datang di Barredrock Farm.
+Semoga menjadi tempat informasi dan pengembangan
+Barred Plymouth Rock yang berkualitas.
+</p>
+
+<div class="buttons">
+
+<a href="#beranda" class="btn btn-primary">
+⬆ Kembali ke Atas
+</a>
+
+<a href="#peternakan" class="btn btn-secondary">
+🐔 Lihat Ayam
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+© 2026 Barredrock Farm Indonesia  
+<br>
+Barred Plymouth Rock • Quality • Care • Breeding
+
+</footer>
+
+</body>
+</html>
