@@ -1,0 +1,986 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#030805"><title>BARRED ROCK — Heritage Poultry Indonesia</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#020604;
+    color:#f5f0df;
+    font-family:Montserrat,Arial,sans-serif;
+    overflow-x:hidden;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+    position:relative;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    padding:25px 18px 80px;
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(0,0,0,.52),
+        rgba(0,8,4,.78) 70%,
+        #020604 100%
+    ),
+    url("barred-rock.jpg") center/cover;
+}
+
+.hero:before{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+
+    background:
+    radial-gradient(
+        circle at 50% 42%,
+        rgba(215,174,63,.12),
+        transparent 30%
+    ),
+    linear-gradient(
+        90deg,
+        rgba(2,6,4,.5),
+        transparent 50%,
+        rgba(2,6,4,.5)
+    );
+}
+
+.hero:after{
+    content:"";
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    opacity:.15;
+
+    background-image:
+    radial-gradient(
+        #f3cf68 .7px,
+        transparent .7px
+    );
+
+    background-size:24px 24px;
+}
+
+/* ================= NAVBAR ================= */
+
+.nav{
+    width:min(100%,1160px);
+    height:82px;
+    padding:0 30px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    border:1px solid rgba(232,194,83,.7);
+    border-radius:50px;
+
+    background:rgba(2,9,5,.72);
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+    0 0 0 1px rgba(255,255,255,.03) inset,
+    0 18px 50px #0008;
+
+    position:relative;
+    z-index:3;
+}
+
+.brand{
+    display:flex;
+    align-items:center;
+    gap:10px;
+
+    color:#f0cb63;
+    font-size:18px;
+    font-weight:900;
+    letter-spacing:4px;
+}
+
+.logo{
+    width:38px;
+    height:38px;
+
+    border:1px solid #dcb84f;
+    border-radius:50%;
+
+    display:grid;
+    place-items:center;
+
+    font-size:20px;
+
+    background:
+    linear-gradient(
+        145deg,
+        #171f16,
+        #050806
+    );
+
+    box-shadow:
+    0 0 18px #d9b84f22;
+}
+
+.links{
+    display:flex;
+    gap:28px;
+}
+
+.links a{
+    color:#e9e9e4;
+    text-decoration:none;
+    font-size:12px;
+    font-weight:700;
+    letter-spacing:1px;
+    transition:.3s;
+}
+
+.links a:hover{
+    color:#f1cc65;
+}
+
+/* ================= MAIN ================= */
+
+.main{
+    width:min(100%,1000px);
+    text-align:center;
+
+    position:relative;
+    z-index:2;
+
+    margin-top:105px;
+}
+
+.eyebrow{
+    display:inline-flex;
+    align-items:center;
+    gap:14px;
+
+    padding:12px 28px;
+
+    border:1px solid #d9b84f;
+    border-radius:40px;
+
+    color:#e8c75f;
+    background:#03080599;
+
+    letter-spacing:4px;
+    font-size:11px;
+    font-weight:700;
+
+    box-shadow:
+    0 0 25px #d9b84f12;
+}
+
+.eyebrow:before,
+.eyebrow:after{
+    content:"";
+
+    width:28px;
+    height:1px;
+
+    background:#d9b84f;
+}
+
+.small-title{
+    margin-top:45px;
+
+    color:#d7bd6a;
+
+    font-family:"Cormorant Garamond",serif;
+
+    letter-spacing:12px;
+    font-size:18px;
+
+    text-transform:uppercase;
+}
+
+/* ================= TITLE ================= */
+
+h1{
+    margin-top:3px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:clamp(70px,13vw,145px);
+
+    line-height:.75;
+
+    letter-spacing:3px;
+
+    text-transform:uppercase;
+
+    color:#eee8d5;
+
+    text-shadow:
+    0 7px 30px #000,
+    0 0 45px #d7b74a18;
+}
+
+h1 span{
+    color:#83edb1;
+
+    background:
+    linear-gradient(
+        90deg,
+        #dfffe9,
+        #72e9a3,
+        #dfffe9
+    );
+
+    -webkit-background-clip:text;
+    background-clip:text;
+
+    color:transparent;
+}
+
+/* ================= DECORATION ================= */
+
+.divider{
+    width:160px;
+    height:1px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #d7b74d,
+        transparent
+    );
+
+    margin:34px auto 25px;
+}
+
+.motto{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:25px;
+
+    letter-spacing:7px;
+
+    color:#f0cf72;
+
+    text-transform:uppercase;
+}
+
+/* ================= DESCRIPTION ================= */
+
+.desc{
+    max-width:760px;
+
+    margin:32px auto 0;
+
+    color:#e7e5dd;
+
+    font-size:17px;
+
+    line-height:1.9;
+}
+
+/* ================= BUTTON ================= */
+
+.cta-row{
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    margin-top:38px;
+
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:17px 34px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    font-weight:800;
+
+    font-size:13px;
+
+    letter-spacing:1px;
+
+    transition:.3s;
+}
+
+.primary{
+    color:#111;
+
+    background:
+    linear-gradient(
+        110deg,
+        #f0cf67,
+        #b9efc9
+    );
+
+    box-shadow:
+    0 10px 35px #0008;
+}
+
+.secondary{
+    color:#e7c85e;
+
+    border:1px solid #d9b84f;
+
+    background:#03080599;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+/* ================= LINE ================= */
+
+.luxury-line{
+    position:absolute;
+
+    bottom:25px;
+
+    z-index:2;
+
+    width:min(90%,700px);
+
+    height:1px;
+
+    background:
+    linear-gradient(
+        90deg,
+        transparent,
+        #cba949,
+        transparent
+    );
+}
+
+/* ================= SECTION ================= */
+
+section{
+    padding:105px 22px;
+
+    position:relative;
+
+    background:
+    radial-gradient(
+        circle at 50% 0,
+        #18301f55,
+        transparent 45%
+    ),
+    #030805;
+}
+
+.section-inner{
+    max-width:1050px;
+
+    margin:auto;
+
+    text-align:center;
+}
+
+.overline{
+    color:#d9ba58;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    font-weight:800;
+}
+
+h2{
+    margin:13px 0 18px;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:55px;
+
+    color:#f1ead7;
+}
+
+.section-inner > p{
+    max-width:720px;
+
+    margin:auto;
+
+    color:#bfc5bd;
+
+    line-height:1.8;
+}
+
+/* ================= SHOW FOTO AYAM ================= */
+
+.show-gallery{
+    margin:55px auto 0;
+
+    display:grid;
+
+    grid-template-columns:1.4fr .8fr .8fr;
+
+    gap:18px;
+
+    max-width:1100px;
+}
+
+.show-photo{
+    position:relative;
+
+    height:430px;
+
+    overflow:hidden;
+
+    border-radius:26px;
+
+    border:1px solid #d9b84f88;
+
+    background:#080d09;
+
+    box-shadow:
+    0 25px 70px #000b,
+    0 0 35px #d9b84f12;
+
+    transition:.5s;
+}
+
+.show-photo.small{
+    height:430px;
+}
+
+.show-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    display:block;
+
+    transition:
+    transform .8s,
+    filter .5s;
+}
+
+.show-photo:after{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent 45%,
+        rgba(0,0,0,.88)
+    );
+
+    pointer-events:none;
+}
+
+.show-photo:hover{
+    transform:translateY(-10px);
+
+    border-color:#f1d36b;
+
+    box-shadow:
+    0 30px 80px #000,
+    0 0 45px #d9b84f25;
+}
+
+.show-photo:hover img{
+    transform:scale(1.08);
+    filter:saturate(1.1);
+}
+
+.photo-label{
+    position:absolute;
+
+    left:22px;
+    right:22px;
+    bottom:20px;
+
+    z-index:2;
+
+    text-align:left;
+}
+
+.photo-label small{
+    color:#e6c45c;
+
+    font-size:10px;
+
+    font-weight:800;
+
+    letter-spacing:3px;
+}
+
+.photo-label h3{
+    margin-top:5px;
+
+    color:#fff8df;
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:31px;
+}
+
+/* bingkai foto terbaik */
+
+.best-badge{
+    position:absolute;
+
+    top:18px;
+    left:18px;
+
+    z-index:3;
+
+    padding:9px 15px;
+
+    border-radius:30px;
+
+    color:#171208;
+
+    background:
+    linear-gradient(
+        110deg,
+        #f4d56d,
+        #d8b348
+    );
+
+    font-size:10px;
+
+    font-weight:900;
+
+    letter-spacing:2px;
+
+    box-shadow:
+    0 5px 20px #0008;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    margin-top:50px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(3,1fr);
+
+    gap:18px;
+}
+
+.card{
+    min-height:210px;
+
+    padding:32px 24px;
+
+    border-radius:24px;
+
+    border:1px solid #c5a84655;
+
+    background:
+    linear-gradient(
+        145deg,
+        #101b13,
+        #050905
+    );
+
+    box-shadow:
+    0 20px 50px #0008;
+
+    transition:.35s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+
+    border-color:#d9bd5c;
+
+    box-shadow:
+    0 25px 60px #000,
+    0 0 30px #d9bd5c18;
+}
+
+.icon{
+    font-size:30px;
+
+    margin-bottom:18px;
+}
+
+.card h3{
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:29px;
+
+    color:#e5c661;
+}
+
+.card p{
+    margin-top:10px;
+
+    color:#aeb6ad;
+
+    font-size:14px;
+
+    line-height:1.7;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:35px;
+
+    text-align:center;
+
+    background:#010302;
+
+    color:#777;
+
+    font-size:11px;
+
+    letter-spacing:3px;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:850px){
+
+    .show-gallery{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .show-photo:first-child{
+        grid-column:1 / -1;
+        height:420px;
+    }
+
+    .show-photo.small{
+        height:300px;
+    }
+}
+
+@media(max-width:700px){
+
+    .hero{
+        padding:18px 12px 65px;
+
+        background-position:center top;
+    }
+
+    .nav{
+        height:70px;
+
+        padding:0 16px;
+    }
+
+    .brand{
+        font-size:13px;
+        letter-spacing:2px;
+    }
+
+    .logo{
+        width:32px;
+        height:32px;
+        font-size:16px;
+    }
+
+    .links{
+        gap:11px;
+    }
+
+    .links a{
+        font-size:9px;
+        letter-spacing:0;
+    }
+
+    .main{
+        margin-top:100px;
+    }
+
+    .eyebrow{
+        font-size:9px;
+        letter-spacing:2px;
+        padding:10px 15px;
+    }
+
+    .small-title{
+        margin-top:35px;
+        font-size:12px;
+        letter-spacing:7px;
+    }
+
+    h1{
+        font-size:68px;
+        line-height:.82;
+    }
+
+    .motto{
+        font-size:16px;
+        letter-spacing:4px;
+    }
+
+    .desc{
+        font-size:15px;
+        line-height:1.8;
+    }
+
+    .show-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .show-photo:first-child{
+        grid-column:auto;
+        height:380px;
+    }
+
+    .show-photo.small{
+        height:300px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    h2{
+        font-size:45px;
+    }
+}
+</style></head><body><!-- ================= HERO ================= --><header class="hero" id="home"><nav class="nav"><div class="brand">
+    <div class="logo">🐔</div>
+    BARRED ROCK
+</div>
+
+<div class="links">
+    <a href="#show">SHOW</a>
+    <a href="#home">HOME</a>
+    <a href="#ciri">CIRI</a>
+    <a href="#profil">PROFIL</a>
+</div>
+
+</nav><main class="main"><div class="eyebrow">
+    PREMIUM POULTRY • INDONESIA 🇮🇩
+</div>
+
+<div class="small-title">
+    HERITAGE • STRENGTH • BEAUTY
+</div>
+
+<h1>
+    BARRED<br>
+    <span>PLYMOUTH</span><br>
+    ROCK
+</h1>
+
+<div class="divider"></div>
+
+<div class="motto">
+    CANTIK • KUAT • BERKARAKTER
+</div>
+
+<p class="desc">
+    Selamat datang di dunia Barred Plymouth Rock —
+    perpaduan pola bulu ikonik, tubuh kokoh,
+    karakter menarik, dan nilai heritage
+    yang membuatnya istimewa.
+</p>
+
+<div class="cta-row">
+
+    <a class="btn primary" href="#show">
+        ✦ LIHAT AYAM TERBAIK
+    </a>
+
+    <a class="btn secondary" href="#profil">
+        EXPLORE PROFIL
+    </a>
+
+</div>
+
+</main><div class="luxury-line"></div></header><!-- ================= SHOW FOTO ================= --><section id="show"><div class="section-inner"><div class="overline">
+    01 — THE BEST COLLECTION
+</div>
+
+<h2>
+    Show Ayam Terbaik
+</h2>
+
+<p>
+    Koleksi Barred Plymouth Rock dengan
+    tampilan khas, pola barred yang menarik,
+    tubuh kokoh dan karakter yang berkelas.
+</p>
+
+<div class="show-gallery">
+
+    <!-- FOTO UTAMA -->
+
+    <div class="show-photo">
+
+        <div class="best-badge">
+            ★ BEST SHOW
+        </div>
+
+        <img src="barred-rock.jpg"
+             alt="Barred Plymouth Rock terbaik">
+
+        <div class="photo-label">
+
+            <small>
+                BARRED ROCK INDONESIA
+            </small>
+
+            <h3>
+                Best Barred Plymouth Rock
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOTO 2 -->
+
+    <div class="show-photo small">
+
+        <img src="barred-rock.jpg"
+             alt="Barred Rock koleksi">
+
+        <div class="photo-label">
+
+            <small>
+                SIGNATURE
+            </small>
+
+            <h3>
+                Heritage
+            </h3>
+
+        </div>
+
+    </div>
+
+
+    <!-- FOTO 3 -->
+
+    <div class="show-photo small">
+
+        <img src="barred-rock.jpg"
+             alt="Barred Plymouth Rock">
+
+        <div class="photo-label">
+
+            <small>
+                PREMIUM LINE
+            </small>
+
+            <h3>
+                Strong & Beautiful
+            </h3>
+
+        </div>
+
+    </div>
+
+</div>
+
+</div></section><!-- ================= CIRI ================= --><section id="ciri"><div class="section-inner"><div class="overline">
+    02 — SIGNATURE CHARACTER
+</div>
+
+<h2>
+    Ciri Khas
+</h2>
+
+<div class="cards">
+
+    <article class="card">
+
+        <div class="icon">
+            ✦
+        </div>
+
+        <h3>
+            Barred Pattern
+        </h3>
+
+        <p>
+            Pola garis hitam-putih menjadi
+            identitas visual yang sangat khas.
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="icon">
+            ♜
+        </div>
+
+        <h3>
+            Strong Body
+        </h3>
+
+        <p>
+            Tubuh kokoh, berisi,
+            dan memiliki penampilan yang tegas.
+        </p>
+
+    </article>
+
+
+    <article class="card">
+
+        <div class="icon">
+            ♛
+        </div>
+
+        <h3>
+            Good Character
+        </h3>
+
+        <p>
+            Umumnya tenang, adaptif,
+            dan menarik untuk dikembangkan.
+        </p>
+
+    </article>
+
+</div>
+
+</div></section><!-- ================= PROFIL ================= --><section id="profil"><div class="section-inner"><div class="overline">
+    03 — PREMIUM POULTRY
+</div>
+
+<h2>
+    Barred Rock Indonesia
+</h2>
+
+<p>
+    Sebuah halaman khusus untuk memperkenalkan
+    Barred Plymouth Rock dengan tampilan modern,
+    elegan, dan berkarakter.
+</p>
+
+</div></section><footer>BARRED ROCK • PREMIUM POULTRY INDONESIA 🇮🇩
+
+</footer></body>
+</html>
