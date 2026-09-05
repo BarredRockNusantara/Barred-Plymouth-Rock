@@ -1,0 +1,2946 @@
+<!DOCTYPE html><html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BarredRock Nusantara | Premium Barred Plymouth Rock</title><meta name="description" content="BarredRock Nusantara - Peternakan dan komunitas Barred Plymouth Rock premium Indonesia."><style>
+
+/* =========================================================
+   BARREDROCK NUSANTARA
+   PREMIUM LUXURY FARM WEBSITE
+   ========================================================= */
+
+:root{
+    --black:#080808;
+    --dark:#101010;
+    --dark-2:#171717;
+    --dark-3:#222222;
+    --white:#ffffff;
+    --soft-white:#f4f1ea;
+    --gold:#d6ae55;
+    --gold-light:#f0d48b;
+    --gold-dark:#9c762d;
+    --gray:#999999;
+    --border:rgba(214,174,85,.22);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:
+    radial-gradient(circle at top left, rgba(214,174,85,.08), transparent 30%),
+    linear-gradient(180deg,#080808,#111111 50%,#080808);
+    color:var(--soft-white);
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* ================= NAVBAR ================= */
+
+.navbar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:82px;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 7%;
+
+    background:rgba(8,8,8,.72);
+    backdrop-filter:blur(20px);
+
+    border-bottom:1px solid var(--border);
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:13px;
+}
+
+.logo-mark{
+    width:46px;
+    height:46px;
+
+    border-radius:50%;
+
+    display:grid;
+    place-items:center;
+
+    border:1px solid var(--gold);
+
+    color:var(--gold);
+
+    font-size:22px;
+
+    box-shadow:
+    0 0 20px rgba(214,174,85,.25),
+    inset 0 0 20px rgba(214,174,85,.08);
+}
+
+.logo-text h1{
+    font-size:17px;
+    letter-spacing:3px;
+    color:var(--gold-light);
+}
+
+.logo-text span{
+    display:block;
+    font-size:9px;
+    color:var(--gray);
+    letter-spacing:3px;
+    margin-top:3px;
+}
+
+.nav-links{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+.nav-links a{
+    font-size:12px;
+    letter-spacing:1.5px;
+    color:#d0d0d0;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    color:var(--gold);
+}
+
+.menu-button{
+    display:none;
+    font-size:25px;
+    color:var(--gold);
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    align-items:center;
+
+    padding:120px 8% 70px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.hero::before{
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    border-radius:50%;
+
+    right:-250px;
+    top:-180px;
+
+    background:radial-gradient(
+        circle,
+        rgba(214,174,85,.16),
+        transparent 65%
+    );
+
+    pointer-events:none;
+}
+
+.hero-grid{
+    width:100%;
+
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+
+    gap:60px;
+
+    align-items:center;
+
+    position:relative;
+
+    z-index:2;
+}
+
+.hero-badge{
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    padding:9px 18px;
+
+    border:1px solid var(--border);
+
+    border-radius:100px;
+
+    background:rgba(214,174,85,.05);
+
+    color:var(--gold-light);
+
+    font-size:10px;
+
+    letter-spacing:3px;
+
+    margin-bottom:25px;
+}
+
+.hero-title{
+    font-size:clamp(50px,7vw,110px);
+
+    line-height:.9;
+
+    letter-spacing:-4px;
+
+    font-weight:800;
+
+    text-transform:uppercase;
+}
+
+.hero-title .gold{
+    display:block;
+
+    color:var(--gold);
+
+    text-shadow:
+    0 0 30px rgba(214,174,85,.18);
+}
+
+.hero-title .outline{
+    display:block;
+
+    color:transparent;
+
+    -webkit-text-stroke:1px rgba(255,255,255,.35);
+}
+
+.hero-description{
+    margin-top:28px;
+
+    max-width:650px;
+
+    color:#aaa;
+
+    font-size:15px;
+
+    line-height:1.9;
+}
+
+.hero-buttons{
+    margin-top:35px;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:15px;
+}
+
+.btn-gold{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:180px;
+
+    padding:16px 25px;
+
+    background:linear-gradient(
+        135deg,
+        var(--gold-light),
+        var(--gold),
+        var(--gold-dark)
+    );
+
+    color:#111;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+
+    border:1px solid var(--gold);
+}
+
+.btn-gold:hover{
+    transform:translateY(-4px);
+
+    box-shadow:
+    0 15px 40px rgba(214,174,85,.22);
+}
+
+.btn-outline{
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    min-width:180px;
+
+    padding:16px 25px;
+
+    border:1px solid rgba(255,255,255,.25);
+
+    color:#ddd;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+}
+
+.btn-outline:hover{
+    border-color:var(--gold);
+
+    color:var(--gold);
+}
+
+/* ================= HERO VISUAL ================= */
+
+.hero-visual{
+    position:relative;
+
+    min-height:620px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+}
+
+.hero-circle{
+    width:min(500px,90vw);
+    aspect-ratio:1;
+
+    border-radius:50%;
+
+    position:absolute;
+
+    border:1px solid rgba(214,174,85,.2);
+
+    box-shadow:
+    inset 0 0 100px rgba(214,174,85,.05),
+    0 0 100px rgba(214,174,85,.08);
+
+    animation:rotateSlow 25s linear infinite;
+}
+
+.hero-circle::before{
+    content:"";
+
+    position:absolute;
+
+    inset:35px;
+
+    border-radius:50%;
+
+    border:1px dashed rgba(214,174,85,.25);
+}
+
+.hero-photo{
+    width:78%;
+    height:500px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(214,174,85,.18),
+        rgba(0,0,0,.8)
+    );
+
+    box-shadow:
+    0 30px 100px rgba(0,0,0,.8);
+}
+
+.hero-photo img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.9;
+
+    transition:1s;
+}
+
+.hero-photo:hover img{
+    transform:scale(1.06);
+}
+
+.photo-label{
+    position:absolute;
+
+    left:20px;
+    bottom:20px;
+
+    background:rgba(8,8,8,.78);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(15px);
+
+    padding:16px 20px;
+}
+
+.photo-label small{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:9px;
+
+    letter-spacing:3px;
+
+    margin-bottom:7px;
+}
+
+.photo-label strong{
+    font-size:15px;
+
+    letter-spacing:1px;
+}
+
+.hero-floating-card{
+    position:absolute;
+
+    right:-10px;
+    bottom:60px;
+
+    width:220px;
+
+    padding:24px;
+
+    background:rgba(20,20,20,.86);
+
+    border:1px solid var(--border);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+    0 20px 70px rgba(0,0,0,.6);
+}
+
+.hero-floating-card .number{
+    font-size:36px;
+
+    color:var(--gold);
+
+    font-weight:bold;
+}
+
+.hero-floating-card p{
+    margin-top:6px;
+
+    font-size:10px;
+
+    line-height:1.7;
+
+    color:#aaa;
+
+    letter-spacing:1px;
+}
+
+/* ================= SECTION ================= */
+
+.section{
+    padding:130px 8%;
+
+    position:relative;
+}
+
+.section-dark{
+    background:
+    linear-gradient(
+        180deg,
+        transparent,
+        rgba(255,255,255,.015),
+        transparent
+    );
+}
+
+.section-tag{
+    color:var(--gold);
+
+    font-size:10px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    margin-bottom:16px;
+}
+
+.section-title{
+    max-width:800px;
+
+    font-size:clamp(36px,5vw,72px);
+
+    line-height:1;
+
+    letter-spacing:-2px;
+
+    text-transform:uppercase;
+}
+
+.section-title span{
+    color:var(--gold);
+}
+
+.section-description{
+    max-width:700px;
+
+    margin-top:25px;
+
+    color:#999;
+
+    line-height:1.9;
+
+    font-size:15px;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:.9fr 1.1fr;
+
+    gap:70px;
+
+    align-items:center;
+}
+
+.about-image{
+    position:relative;
+}
+
+.about-image-main{
+    height:600px;
+
+    overflow:hidden;
+
+    border:1px solid var(--border);
+}
+
+.about-image-main img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+}
+
+.about-image-main:hover img{
+    transform:scale(1.05);
+}
+
+.about-stamp{
+    position:absolute;
+
+    width:150px;
+    height:150px;
+
+    right:-40px;
+    bottom:40px;
+
+    border-radius:50%;
+
+    background:var(--gold);
+
+    color:#111;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    transform:rotate(-10deg);
+
+    box-shadow:
+    0 20px 60px rgba(214,174,85,.25);
+}
+
+.about-content h3{
+    font-size:34px;
+
+    line-height:1.2;
+
+    margin-bottom:25px;
+}
+
+.about-content p{
+    color:#999;
+
+    line-height:2;
+
+    margin-bottom:18px;
+
+    font-size:15px;
+}
+
+.about-list{
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:15px;
+}
+
+.about-item{
+    padding:20px;
+
+    background:rgba(255,255,255,.025);
+
+    border:1px solid rgba(255,255,255,.07);
+
+    transition:.4s;
+}
+
+.about-item:hover{
+    border-color:var(--gold);
+
+    transform:translateY(-5px);
+}
+
+.about-item strong{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:24px;
+
+    margin-bottom:8px;
+}
+
+.about-item span{
+    font-size:11px;
+
+    color:#aaa;
+
+    letter-spacing:1px;
+}
+
+/* ================= STATISTICS ================= */
+
+.stats{
+    padding:90px 8%;
+
+    border-top:1px solid var(--border);
+
+    border-bottom:1px solid var(--border);
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:20px;
+
+    background:
+    radial-gradient(
+        circle at center,
+        rgba(214,174,85,.08),
+        transparent 60%
+    );
+}
+
+.stat{
+    text-align:center;
+
+    padding:25px;
+}
+
+.stat h3{
+    color:var(--gold);
+
+    font-size:clamp(35px,4vw,65px);
+
+    margin-bottom:10px;
+}
+
+.stat p{
+    font-size:10px;
+
+    color:#999;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+/* ================= BREED SECTION ================= */
+
+.breed-grid{
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.breed-card{
+    min-height:380px;
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:flex-end;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#141414;
+
+    transition:.5s;
+}
+
+.breed-card::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    z-index:1;
+}
+
+.breed-card img{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.65;
+
+    transition:1s;
+}
+
+.breed-card:hover{
+    transform:translateY(-10px);
+
+    border-color:var(--gold);
+}
+
+.breed-card:hover img{
+    transform:scale(1.12);
+}
+
+.breed-card-content{
+    position:relative;
+
+    z-index:2;
+}
+
+.breed-number{
+    color:var(--gold);
+
+    font-size:11px;
+
+    letter-spacing:3px;
+
+    margin-bottom:15px;
+}
+
+.breed-card h3{
+    font-size:28px;
+
+    margin-bottom:12px;
+}
+
+.breed-card p{
+    font-size:13px;
+
+    color:#bbb;
+
+    line-height:1.8;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery-intro{
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:end;
+
+    gap:40px;
+}
+
+.gallery-grid{
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    grid-auto-rows:260px;
+
+    gap:16px;
+}
+
+.gallery-item{
+    position:relative;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    background:#171717;
+
+    cursor:pointer;
+}
+
+.gallery-item:nth-child(1){
+    grid-column:span 2;
+    grid-row:span 2;
+}
+
+.gallery-item:nth-child(6){
+    grid-column:span 2;
+}
+
+.gallery-item img{
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.1);
+}
+
+.gallery-overlay{
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:flex-end;
+
+    padding:25px;
+
+    background:
+    linear-gradient(
+        180deg,
+        transparent,
+        rgba(0,0,0,.9)
+    );
+
+    opacity:0;
+
+    transition:.4s;
+}
+
+.gallery-item:hover .gallery-overlay{
+    opacity:1;
+}
+
+.gallery-overlay h4{
+    font-size:17px;
+
+    letter-spacing:1px;
+}
+
+.gallery-overlay span{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:9px;
+
+    letter-spacing:3px;
+
+    margin-bottom:7px;
+}
+
+/* ================= HISTORY ================= */
+
+.timeline{
+    margin-top:80px;
+
+    position:relative;
+
+    max-width:1000px;
+}
+
+.timeline::before{
+    content:"";
+
+    position:absolute;
+
+    left:20px;
+    top:0;
+    bottom:0;
+
+    width:1px;
+
+    background:
+    linear-gradient(
+        var(--gold),
+        transparent
+    );
+}
+
+.timeline-item{
+    position:relative;
+
+    padding-left:80px;
+
+    padding-bottom:65px;
+}
+
+.timeline-dot{
+    position:absolute;
+
+    left:12px;
+    top:0;
+
+    width:17px;
+    height:17px;
+
+    border-radius:50%;
+
+    background:var(--dark);
+
+    border:2px solid var(--gold);
+
+    box-shadow:
+    0 0 20px rgba(214,174,85,.4);
+}
+
+.timeline-year{
+    color:var(--gold);
+
+    font-size:13px;
+
+    letter-spacing:3px;
+
+    margin-bottom:12px;
+}
+
+.timeline-item h3{
+    font-size:28px;
+
+    margin-bottom:12px;
+}
+
+.timeline-item p{
+    color:#999;
+
+    line-height:1.9;
+
+    max-width:700px;
+}
+
+/* ================= WORLD FARM ================= */
+
+.world-grid{
+    margin-top:70px;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:20px;
+}
+
+.world-card{
+    padding:40px;
+
+    min-height:300px;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        135deg,
+        rgba(214,174,85,.08),
+        rgba(255,255,255,.02)
+    );
+
+    border:1px solid var(--border);
+
+    transition:.5s;
+}
+
+.world-card:hover{
+    transform:translateY(-10px);
+
+    box-shadow:
+    0 25px 70px rgba(0,0,0,.5);
+}
+
+.world-icon{
+    width:60px;
+    height:60px;
+
+    border:1px solid var(--gold);
+
+    display:grid;
+
+    place-items:center;
+
+    color:var(--gold);
+
+    font-size:25px;
+
+    margin-bottom:30px;
+}
+
+.world-card h3{
+    font-size:25px;
+
+    margin-bottom:15px;
+}
+
+.world-card p{
+    color:#999;
+
+    line-height:1.9;
+
+    font-size:14px;
+}
+
+/* ================= BREEDING ================= */
+
+.breeding-panel{
+    margin-top:70px;
+
+    min-height:600px;
+
+    padding:70px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    display:flex;
+
+    align-items:center;
+
+    border:1px solid var(--border);
+
+    background:#111;
+}
+
+.breeding-panel img{
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    opacity:.28;
+}
+
+.breeding-panel::before{
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:
+    linear-gradient(
+        90deg,
+        rgba(8,8,8,.96),
+        rgba(8,8,8,.65),
+        rgba(8,8,8,.25)
+    );
+
+    z-index:1;
+}
+
+.breeding-content{
+    position:relative;
+
+    z-index:2;
+
+    max-width:650px;
+}
+
+.breeding-content h2{
+    font-size:clamp(40px,5vw,75px);
+
+    line-height:1;
+
+    margin-bottom:25px;
+}
+
+.breeding-content h2 span{
+    color:var(--gold);
+}
+
+.breeding-content p{
+    color:#aaa;
+
+    line-height:2;
+
+    margin-bottom:30px;
+}
+
+.breeding-points{
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:12px;
+}
+
+.breeding-point{
+    padding:16px;
+
+    background:rgba(255,255,255,.05);
+
+    border-left:2px solid var(--gold);
+
+    font-size:12px;
+
+    color:#ddd;
+}
+
+/* ================= COMMUNITY ================= */
+
+.community{
+    text-align:center;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.community::before{
+    content:"";
+
+    position:absolute;
+
+    width:700px;
+    height:700px;
+
+    left:50%;
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:
+    radial-gradient(
+        circle,
+        rgba(214,174,85,.12),
+        transparent 65%
+    );
+}
+
+.community-content{
+    position:relative;
+
+    z-index:2;
+
+    max-width:850px;
+
+    margin:auto;
+}
+
+.community h2{
+    font-size:clamp(42px,6vw,90px);
+
+    line-height:.95;
+
+    text-transform:uppercase;
+}
+
+.community h2 span{
+    color:var(--gold);
+}
+
+.community p{
+    margin:30px auto;
+
+    max-width:650px;
+
+    color:#999;
+
+    line-height:1.9;
+}
+
+/* ================= FACEBOOK ================= */
+
+.facebook-section{
+    padding:100px 8%;
+
+    background:
+    linear-gradient(
+        135deg,
+        #101010,
+        #17130b
+    );
+
+    border-top:1px solid var(--border);
+}
+
+.facebook-box{
+    max-width:1200px;
+
+    margin:auto;
+
+    padding:60px;
+
+    display:grid;
+
+    grid-template-columns:1fr auto;
+
+    gap:40px;
+
+    align-items:center;
+
+    border:1px solid var(--border);
+
+    background:
+    radial-gradient(
+        circle at right,
+        rgba(214,174,85,.12),
+        transparent 40%
+    ),
+    rgba(255,255,255,.02);
+}
+
+.facebook-info small{
+    color:var(--gold);
+
+    letter-spacing:4px;
+
+    font-size:10px;
+}
+
+.facebook-info h2{
+    font-size:clamp(35px,5vw,65px);
+
+    margin:15px 0;
+}
+
+.facebook-info p{
+    max-width:650px;
+
+    color:#999;
+
+    line-height:1.9;
+}
+
+.facebook-button{
+    min-width:220px;
+
+    padding:20px 30px;
+
+    text-align:center;
+
+    background:var(--gold);
+
+    color:#111;
+
+    font-size:11px;
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    transition:.4s;
+}
+
+.facebook-button:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+    0 15px 50px rgba(214,174,85,.25);
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    padding:80px 8% 30px;
+
+    background:#070707;
+
+    border-top:1px solid rgba(255,255,255,.05);
+}
+
+.footer-grid{
+    display:grid;
+
+    grid-template-columns:2fr 1fr 1fr 1fr;
+
+    gap:50px;
+
+    padding-bottom:60px;
+}
+
+.footer-brand h2{
+    color:var(--gold);
+
+    font-size:25px;
+
+    letter-spacing:3px;
+
+    margin-bottom:18px;
+}
+
+.footer-brand p{
+    color:#777;
+
+    line-height:1.9;
+
+    max-width:400px;
+
+    font-size:13px;
+}
+
+.footer-column h4{
+    color:#ddd;
+
+    margin-bottom:20px;
+
+    font-size:11px;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.footer-column a{
+    display:block;
+
+    color:#777;
+
+    margin-bottom:12px;
+
+    font-size:12px;
+
+    transition:.3s;
+}
+
+.footer-column a:hover{
+    color:var(--gold);
+}
+
+.footer-bottom{
+    border-top:1px solid rgba(255,255,255,.07);
+
+    padding-top:25px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+    color:#666;
+
+    font-size:10px;
+
+    letter-spacing:1px;
+}
+
+/* ================= ANIMATIONS ================= */
+
+@keyframes rotateSlow{
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+}
+
+.reveal{
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+    opacity .8s ease,
+    transform .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+
+    transform:translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:1000px){
+
+    .hero-grid,
+    .about-grid{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:150px;
+    }
+
+    .hero-visual{
+        min-height:550px;
+    }
+
+    .breed-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .world-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .stats{
+        grid-template-columns:1fr 1fr;
+    }
+
+}
+
+@media(max-width:760px){
+
+    .navbar{
+        padding:0 5%;
+    }
+
+    .nav-links{
+        display:none;
+    }
+
+    .menu-button{
+        display:block;
+    }
+
+    .hero{
+        padding-left:6%;
+        padding-right:6%;
+    }
+
+    .section{
+        padding:90px 6%;
+    }
+
+    .hero-title{
+        letter-spacing:-2px;
+    }
+
+    .hero-visual{
+        min-height:450px;
+    }
+
+    .hero-photo{
+        height:400px;
+    }
+
+    .hero-floating-card{
+        right:0;
+        bottom:20px;
+    }
+
+    .about-stamp{
+        right:10px;
+    }
+
+    .about-list{
+        grid-template-columns:1fr;
+    }
+
+    .breed-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+
+        grid-auto-rows:180px;
+    }
+
+    .gallery-item:nth-child(1){
+        grid-column:span 2;
+        grid-row:span 2;
+    }
+
+    .facebook-box{
+        padding:35px;
+
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .breeding-panel{
+        padding:35px;
+    }
+
+    .breeding-points{
+        grid-template-columns:1fr;
+    }
+
+}
+
+</style></head><body><!-- ================= NAVBAR ================= --><nav class="navbar"><a href="#home" class="logo">
+
+    <div class="logo-mark">
+        🐔
+    </div>
+
+    <div class="logo-text">
+        <h1>BARREDROCK</h1>
+        <span>NUSANTARA PREMIUM FARM</span>
+    </div>
+
+</a>
+
+<ul class="nav-links">
+
+    <li>
+        <a href="#home">HOME</a>
+    </li>
+
+    <li>
+        <a href="#tentang">TENTANG</a>
+    </li>
+
+    <li>
+        <a href="#karakter">KARAKTER</a>
+    </li>
+
+    <li>
+        <a href="#gallery">GALERI</a>
+    </li>
+
+    <li>
+        <a href="#history">HISTORY</a>
+    </li>
+
+    <li>
+        <a href="#community">KOMUNITAS</a>
+    </li>
+
+</ul>
+
+<div class="menu-button">
+    ☰
+</div>
+
+</nav><!-- ================= HERO ================= --><section class="hero" id="home"><div class="hero-grid">
+
+    <div class="hero-content reveal">
+
+        <div class="hero-badge">
+            ✦ PREMIUM BARRED PLYMOUTH ROCK
+        </div>
+
+        <h1 class="hero-title">
+
+            <span>BARRED</span>
+
+            <span class="gold">
+                PLYMOUTH
+            </span>
+
+            <span class="outline">
+                ROCK
+            </span>
+
+        </h1>
+
+        <p class="hero-description">
+
+            Keindahan pola bulu hitam putih yang ikonik,
+            karakter yang kuat, dan pesona klasik dari salah satu
+            ras ayam paling terkenal di dunia.
+
+            Selamat datang di dunia BarredRock Nusantara,
+            tempat kecintaan terhadap Barred Plymouth Rock
+            bertemu dengan semangat breeding, edukasi,
+            komunitas, dan kualitas.
+
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#tentang" class="btn-gold">
+                EKSPLORASI BREED
+            </a>
+
+            <a href="#gallery" class="btn-outline">
+                LIHAT GALERI
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-visual reveal">
+
+        <div class="hero-circle"></div>
+
+        <!-- GANTI FOTO INI DENGAN FOTO AYAM ANDA -->
+
+        <div class="hero-photo">
+
+            <img
+            src="images/barredrock-main.jpg"
+            alt="Barred Plymouth Rock">
+
+            <div class="photo-label">
+
+                <small>
+                    FEATURED BREED
+                </small>
+
+                <strong>
+                    Barred Plymouth Rock
+                </strong>
+
+            </div>
+
+        </div>
+
+        <div class="hero-floating-card">
+
+            <div class="number">
+                01
+            </div>
+
+            <p>
+                CLASSIC AMERICAN BREED
+                WITH ICONIC BARRED FEATHER PATTERN
+            </p>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- ================= ABOUT ================= --><section class="section section-dark" id="tentang"><div class="section-tag">
+    01 — THE BREED
+</div>
+
+<h2 class="section-title">
+    Elegan.
+    <span>Kuat.</span>
+    Ikonik.
+</h2>
+
+<p class="section-description">
+
+    Barred Plymouth Rock dikenal karena tampilan bulunya
+    yang khas, kombinasi warna hitam dan putih,
+    serta karakter yang membuatnya menjadi salah satu
+    ras ayam klasik yang terus menarik perhatian
+    para penggemar unggas di berbagai belahan dunia.
+
+</p>
+
+<div class="about-grid">
+
+    <div class="about-image reveal">
+
+        <div class="about-image-main">
+
+            <!-- FOTO 02 -->
+
+            <img
+            src="images/barredrock-about.jpg"
+            alt="Barred Plymouth Rock Farm">
+
+        </div>
+
+        <div class="about-stamp">
+
+            PREMIUM<br>
+            HERITAGE<br>
+            BREED
+
+        </div>
+
+    </div>
+
+    <div class="about-content reveal">
+
+        <h3>
+            Lebih Dari Sekadar
+            <span style="color:#d6ae55;">
+                Ayam.
+            </span>
+        </h3>
+
+        <p>
+
+            Barred Plymouth Rock membawa perpaduan
+            antara sejarah, keindahan, produktivitas,
+            dan karakter yang menjadikannya istimewa.
+
+            Pola barring pada bulunya memberikan
+            identitas visual yang sangat mudah dikenali.
+
+        </p>
+
+        <p>
+
+            Melalui BarredRock Nusantara,
+            kami menghadirkan ruang digital untuk
+            berbagi informasi, dokumentasi,
+            galeri peternakan, serta semangat
+            komunitas bagi para penggemar
+            Barred Plymouth Rock.
+
+        </p>
+
+        <div class="about-list">
+
+            <div class="about-item">
+
+                <strong>
+                    01
+                </strong>
+
+                <span>
+                    ICONIC FEATHER PATTERN
+                </span>
+
+            </div>
+
+            <div class="about-item">
+
+                <strong>
+                    02
+                </strong>
+
+                <span>
+                    CLASSIC HERITAGE BREED
+                </span>
+
+            </div>
+
+            <div class="about-item">
+
+                <strong>
+                    03
+                </strong>
+
+                <span>
+                    STRONG FARM CHARACTER
+                </span>
+
+            </div>
+
+            <div class="about-item">
+
+                <strong>
+                    04
+                </strong>
+
+                <span>
+                    GLOBAL ENTHUSIAST COMMUNITY
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- ================= STATISTICS ================= --><section class="stats"><div class="stat reveal">
+
+    <h3 class="counter" data-target="100">
+        0
+    </h3>
+
+    <p>
+        Heritage Spirit
+    </p>
+
+</div>
+
+<div class="stat reveal">
+
+    <h3 class="counter" data-target="12">
+        0
+    </h3>
+
+    <p>
+        Gallery Frames
+    </p>
+
+</div>
+
+<div class="stat reveal">
+
+    <h3 class="counter" data-target="24">
+        0
+    </h3>
+
+    <p>
+        Premium Sections
+    </p>
+
+</div>
+
+<div class="stat reveal">
+
+    <h3 class="counter" data-target="1">
+        0
+    </h3>
+
+    <p>
+        BarredRock Community
+    </p>
+
+</div>
+
+</section><!-- ================= CHARACTER ================= --><section class="section" id="karakter"><div class="section-tag">
+    02 — CHARACTER
+</div>
+
+<h2 class="section-title">
+    DNA OF A
+    <span>CLASSIC BREED.</span>
+</h2>
+
+<div class="breed-grid">
+
+    <article class="breed-card reveal">
+
+        <!-- FOTO 03 -->
+
+        <img
+        src="images/barredrock-pattern.jpg"
+        alt="Barred Pattern">
+
+        <div class="breed-card-content">
+
+            <div class="breed-number">
+                01 / FEATHER
+            </div>
+
+            <h3>
+                Barred Pattern
+            </h3>
+
+            <p>
+                Pola garis hitam putih yang memberikan
+                karakter visual khas dan menjadikan
+                ras ini mudah dikenali.
+            </p>
+
+        </div>
+
+    </article>
+
+    <article class="breed-card reveal">
+
+        <!-- FOTO 04 -->
+
+        <img
+        src="images/barredrock-farm.jpg"
+        alt="Farm Character">
+
+        <div class="breed-card-content">
+
+            <div class="breed-number">
+                02 / CHARACTER
+            </div>
+
+            <h3>
+                Farm Presence
+            </h3>
+
+            <p>
+                Tampilan yang kokoh dan klasik,
+                menciptakan kesan kuat dalam
+                lingkungan peternakan.
+            </p>
+
+        </div>
+
+    </article>
+
+    <article class="breed-card reveal">
+
+        <!-- FOTO 05 -->
+
+        <img
+        src="images/barredrock-premium.jpg"
+        alt="Premium Breed">
+
+        <div class="breed-card-content">
+
+            <div class="breed-number">
+                03 / HERITAGE
+            </div>
+
+            <h3>
+                Timeless Breed
+            </h3>
+
+            <p>
+                Sebuah ras dengan sejarah panjang
+                yang tetap memiliki daya tarik
+                bagi penggemar unggas hingga sekarang.
+            </p>
+
+        </div>
+
+    </article>
+
+</div>
+
+</section><!-- ================= GALLERY ================= --><section class="section section-dark" id="gallery"><div class="gallery-intro">
+
+    <div>
+
+        <div class="section-tag">
+            03 — GLOBAL GALLERY
+        </div>
+
+        <h2 class="section-title">
+            WORLD OF
+            <span>BARRED ROCK.</span>
+        </h2>
+
+    </div>
+
+</div>
+
+<!-- TOTAL 12 SLOT FOTO -->
+
+<div class="gallery-grid">
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 01 -->
+
+        <img src="images/gallery-01.jpg" alt="BarredRock Gallery 01">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 01
+                </span>
+
+                <h4>
+                    The Iconic Barred Pattern
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 02 -->
+
+        <img src="images/gallery-02.jpg" alt="BarredRock Gallery 02">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 02
+                </span>
+
+                <h4>
+                    Premium Poultry
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 03 -->
+
+        <img src="images/gallery-03.jpg" alt="BarredRock Gallery 03">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 03
+                </span>
+
+                <h4>
+                    Classic Beauty
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 04 -->
+
+        <img src="images/gallery-04.jpg" alt="BarredRock Gallery 04">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 04
+                </span>
+
+                <h4>
+                    Farm Heritage
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 05 -->
+
+        <img src="images/gallery-05.jpg" alt="BarredRock Gallery 05">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 05
+                </span>
+
+                <h4>
+                    Barred Elegance
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 06 -->
+
+        <img src="images/gallery-06.jpg" alt="BarredRock Gallery 06">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 06
+                </span>
+
+                <h4>
+                    Poultry Portrait
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 07 -->
+
+        <img src="images/gallery-07.jpg" alt="BarredRock Gallery 07">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 07
+                </span>
+
+                <h4>
+                    Strong Character
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 08 -->
+
+        <img src="images/gallery-08.jpg" alt="BarredRock Gallery 08">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 08
+                </span>
+
+                <h4>
+                    Global Heritage
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 09 -->
+
+        <img src="images/gallery-09.jpg" alt="BarredRock Gallery 09">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 09
+                </span>
+
+                <h4>
+                    Farm Selection
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 10 -->
+
+        <img src="images/gallery-10.jpg" alt="BarredRock Gallery 10">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 10
+                </span>
+
+                <h4>
+                    Feather Detail
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 11 -->
+
+        <img src="images/gallery-11.jpg" alt="BarredRock Gallery 11">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 11
+                </span>
+
+                <h4>
+                    Premium Line
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="gallery-item reveal">
+
+        <!-- FOTO 12 -->
+
+        <img src="images/gallery-12.jpg" alt="BarredRock Gallery 12">
+
+        <div class="gallery-overlay">
+
+            <div>
+
+                <span>
+                    GALLERY 12
+                </span>
+
+                <h4>
+                    BarredRock Nusantara
+                </h4>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- ================= HISTORY ================= --><section class="section" id="history"><div class="section-tag">
+    04 — HERITAGE TIMELINE
+</div>
+
+<h2 class="section-title">
+    A STORY OF
+    <span>TRADITION.</span>
+</h2>
+
+<div class="timeline">
+
+    <div class="timeline-item reveal">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+            HERITAGE
+        </div>
+
+        <h3>
+            The Beginning
+        </h3>
+
+        <p>
+            Barred Plymouth Rock berkembang sebagai bagian dari
+            sejarah panjang dunia perunggasan dan kemudian menjadi
+            salah satu ras klasik yang dikenal luas oleh
+            para penggemar ayam di berbagai negara.
+        </p>
+
+    </div>
+
+    <div class="timeline-item reveal">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+            DEVELOPMENT
+        </div>
+
+        <h3>
+            A Recognizable Identity
+        </h3>
+
+        <p>
+            Pola bulu barred menjadi salah satu identitas visual
+            paling kuat yang membuat Barred Plymouth Rock
+            memiliki karakter tersendiri.
+        </p>
+
+    </div>
+
+    <div class="timeline-item reveal">
+
+        <div class="timeline-dot"></div>
+
+        <div class="timeline-year">
+            TODAY
+        </div>
+
+        <h3>
+            A Global Community
+        </h3>
+
+        <p>
+            Hingga saat ini, Barred Plymouth Rock terus
+            menarik perhatian peternak, breeder, kolektor,
+            dan komunitas unggas di berbagai belahan dunia.
+        </p>
+
+    </div>
+
+</div>
+
+</section><!-- ================= BREEDING ================= --><section class="section"><div class="section-tag">
+    05 — BREEDING SPIRIT
+</div>
+
+<div class="breeding-panel reveal">
+
+    <!-- FOTO TAMBAHAN -->
+
+    <img
+    src="images/breeding-background.jpg"
+    alt="BarredRock Breeding">
+
+    <div class="breeding-content">
+
+        <h2>
+            PASSION FOR
+            <span>QUALITY.</span>
+        </h2>
+
+        <p>
+            Breeding adalah perjalanan panjang.
+            Setiap generasi membawa cerita,
+            pengamatan, pengalaman, dan dedikasi
+            terhadap kualitas serta karakter
+            dari Barred Plymouth Rock.
+
+        </p>
+
+        <div class="breeding-points">
+
+            <div class="breeding-point">
+                ✓ SELECTIVE BREEDING
+            </div>
+
+            <div class="breeding-point">
+                ✓ FEATHER QUALITY
+            </div>
+
+            <div class="breeding-point">
+                ✓ STRONG CHARACTER
+            </div>
+
+            <div class="breeding-point">
+                ✓ HERITAGE PASSION
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+</section><!-- ================= WORLD ================= --><section class="section section-dark"><div class="section-tag">
+    06 — GLOBAL CONNECTION
+</div>
+
+<h2 class="section-title">
+    CONNECTED BY
+    <span>PASSION.</span>
+</h2>
+
+<div class="world-grid">
+
+    <article class="world-card reveal">
+
+        <div class="world-icon">
+            🌎
+        </div>
+
+        <h3>
+            Global Farms
+        </h3>
+
+        <p>
+            Inspirasi dari berbagai peternakan
+            dan penggemar Barred Plymouth Rock
+            di berbagai penjuru dunia.
+        </p>
+
+    </article>
+
+    <article class="world-card reveal">
+
+        <div class="world-icon">
+            🧬
+        </div>
+
+        <h3>
+            Breeding Passion
+        </h3>
+
+        <p>
+            Sebuah perjalanan untuk mempelajari,
+            mengembangkan, dan mendokumentasikan
+            kecintaan terhadap dunia breeding.
+        </p>
+
+    </article>
+
+    <article class="world-card reveal">
+
+        <div class="world-icon">
+            🤝
+        </div>
+
+        <h3>
+            Community
+        </h3>
+
+        <p>
+            Menghubungkan para pecinta unggas
+            untuk berbagi pengalaman,
+            foto, pengetahuan, dan inspirasi.
+        </p>
+
+    </article>
+
+</div>
+
+</section><!-- ================= COMMUNITY ================= --><section class="section community" id="community"><div class="community-content reveal">
+
+    <div class="section-tag">
+        07 — JOIN THE COMMUNITY
+    </div>
+
+    <h2>
+        UNITED BY
+        <span>BARRED ROCK.</span>
+    </h2>
+
+    <p>
+        BarredRock Nusantara bukan hanya sebuah website.
+        Ini adalah ruang untuk berbagi kecintaan
+        terhadap Barred Plymouth Rock,
+        peternakan, breeding,
+        dokumentasi, dan komunitas.
+    </p>
+
+    <a href="#facebook" class="btn-gold">
+        GABUNG KOMUNITAS
+    </a>
+
+</div>
+
+</section><!-- ================= FACEBOOK COMMUNITY ================= --><section class="facebook-section" id="facebook"><div class="facebook-box reveal">
+
+    <div class="facebook-info">
+
+        <small>
+            OFFICIAL COMMUNITY
+        </small>
+
+        <h2>
+            FACEBOOK COMMUNITY
+        </h2>
+
+        <p>
+            Bergabunglah bersama komunitas
+            BarredRock Nusantara.
+            Bagikan foto, pengalaman,
+            diskusi breeding, perkembangan ternak,
+            dan kecintaan terhadap
+            Barred Plymouth Rock.
+
+        </p>
+
+    </div>
+
+    <!-- GANTI # DENGAN LINK GRUP FACEBOOK -->
+
+    <a
+    href="#"
+    target="_blank"
+    class="facebook-button">
+
+        JOIN FACEBOOK
+
+    </a>
+
+</div>
+
+</section><!-- ================= FOOTER ================= --><footer><div class="footer-grid">
+
+    <div class="footer-brand">
+
+        <h2>
+            BARREDROCK
+        </h2>
+
+        <p>
+            Premium digital home untuk
+            Barred Plymouth Rock,
+            breeding passion,
+            poultry photography,
+            dan komunitas penggemar unggas.
+        </p>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h4>
+            Explore
+        </h4>
+
+        <a href="#home">
+            Home
+        </a>
+
+        <a href="#tentang">
+            About Breed
+        </a>
+
+        <a href="#karakter">
+            Character
+        </a>
+
+        <a href="#gallery">
+            Gallery
+        </a>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h4>
+            Discover
+        </h4>
+
+        <a href="#history">
+            History
+        </a>
+
+        <a href="#community">
+            Community
+        </a>
+
+        <a href="#facebook">
+            Facebook
+        </a>
+
+    </div>
+
+    <div class="footer-column">
+
+        <h4>
+            BarredRock
+        </h4>
+
+        <a href="#">
+            Breeding
+        </a>
+
+        <a href="#">
+            Poultry
+        </a>
+
+        <a href="#">
+            Heritage
+        </a>
+
+    </div>
+
+</div>
+
+<div class="footer-bottom">
+
+    <span>
+        © 2026 BARREDROCK NUSANTARA
+    </span>
+
+    <span>
+        BARRED PLYMOUTH ROCK • PASSION • HERITAGE
+    </span>
+
+</div>
+
+</footer><!-- ================= JAVASCRIPT ================= --><script>
+
+/* REVEAL ANIMATION */
+
+const revealElements =
+document.querySelectorAll(".reveal");
+
+const revealObserver =
+new IntersectionObserver(
+
+    function(entries){
+
+        entries.forEach(function(entry){
+
+            if(entry.isIntersecting){
+
+                entry.target.classList.add(
+                    "active"
+                );
+
+            }
+
+        });
+
+    },
+
+    {
+        threshold:0.12
+    }
+
+);
+
+revealElements.forEach(function(element){
+
+    revealObserver.observe(element);
+
+});
+
+
+/* COUNTER ANIMATION */
+
+const counters =
+document.querySelectorAll(".counter");
+
+counters.forEach(function(counter){
+
+    let started = false;
+
+    const counterObserver =
+    new IntersectionObserver(
+
+        function(entries){
+
+            entries.forEach(function(entry){
+
+                if(
+                    entry.isIntersecting &&
+                    !started
+                ){
+
+                    started = true;
+
+                    const target =
+                    parseInt(
+                        counter.dataset.target
+                    );
+
+                    let current = 0;
+
+                    const increment =
+                    Math.max(
+                        1,
+                        Math.ceil(target / 100)
+                    );
+
+                    const timer =
+                    setInterval(function(){
+
+                        current += increment;
+
+                        if(
+                            current >= target
+                        ){
+
+                            current = target;
+
+                            clearInterval(timer);
+
+                        }
+
+                        counter.textContent =
+                        current;
+
+                    },20);
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold:0.5
+        }
+
+    );
+
+    counterObserver.observe(counter);
+
+});
+
+
+/* NAVBAR EFFECT */
+
+const navbar =
+document.querySelector(".navbar");
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        if(
+            window.scrollY > 80
+        ){
+
+            navbar.style.background =
+            "rgba(5,5,5,.94)";
+
+        }
+
+        else{
+
+            navbar.style.background =
+            "rgba(8,8,8,.72)";
+
+        }
+
+    }
+);
+
+
+/* PARALLAX HERO */
+
+const heroPhoto =
+document.querySelector(".hero-photo");
+
+window.addEventListener(
+    "mousemove",
+    function(event){
+
+        if(
+            window.innerWidth < 900
+        ){
+
+            return;
+
+        }
+
+        const x =
+        event.clientX /
+        window.innerWidth -
+        .5;
+
+        const y =
+        event.clientY /
+        window.innerHeight -
+        .5;
+
+        heroPhoto.style.transform =
+        "translate(" +
+        x * 12 +
+        "px," +
+        y * 12 +
+        "px)";
+
+    }
+);
+
+
+/* SMOOTH ACTIVE NAVIGATION */
+
+const sections =
+document.querySelectorAll("section[id]");
+
+const navigationLinks =
+document.querySelectorAll(
+    ".nav-links a"
+);
+
+window.addEventListener(
+    "scroll",
+    function(){
+
+        let current = "";
+
+        sections.forEach(
+            function(section){
+
+                const sectionTop =
+                section.offsetTop - 150;
+
+                if(
+                    window.scrollY >=
+                    sectionTop
+                ){
+
+                    current =
+                    section.getAttribute("id");
+
+                }
+
+            }
+        );
+
+        navigationLinks.forEach(
+            function(link){
+
+                link.style.color =
+                "#d0d0d0";
+
+                if(
+                    link.getAttribute("href") ===
+                    "#" + current
+                ){
+
+                    link.style.color =
+                    "#d6ae55";
+
+                }
+
+            }
+        );
+
+    }
+);
+
+
+/* GALLERY LIGHT EFFECT */
+
+const galleryItems =
+document.querySelectorAll(
+    ".gallery-item"
+);
+
+galleryItems.forEach(
+    function(item){
+
+        item.addEventListener(
+            "mouseenter",
+            function(){
+
+                item.style.boxShadow =
+                "0 20px 60px rgba(0,0,0,.6)";
+
+            }
+        );
+
+        item.addEventListener(
+            "mouseleave",
+            function(){
+
+                item.style.boxShadow =
+                "none";
+
+            }
+        );
+
+    }
+);
+
+
+/* PREMIUM LOADING EFFECT */
+
+window.addEventListener(
+    "load",
+    function(){
+
+        document.body.style.opacity =
+        "0";
+
+        document.body.style.transition =
+        "opacity 1s ease";
+
+        setTimeout(
+            function(){
+
+                document.body.style.opacity =
+                "1";
+
+            },
+            100
+        );
+
+    }
+);
+
+</script></body>
+</html>
