@@ -34,8 +34,23 @@ h1{font-size:clamp(34px,6vw,66px);line-height:1.08;margin:14px auto;max-width:85
 @keyframes rainbow{to{background-position:300% center}}
 @keyframes shine{0%,100%{filter:drop-shadow(0 0 0 rgba(255,255,255,0))}50%{filter:drop-shadow(0 0 12px rgba(255,255,255,.9))}}
 .hero p{max-width:720px;margin:18px auto;color:#53636d;font-size:17px}
-.hero-photo{margin:38px auto 0;max-width:920px;height:330px;border-radius:30px;border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow);background:linear-gradient(135deg,#9edff3,#dff8ff 45%,#9dd7a9);display:grid;place-items:center;color:#52646e;font-weight:700}
-.hero-photo span{padding:12px 18px;border:1px dashed #647780;border-radius:12px;background:rgba(255,255,255,.55)}
+.hero-photo{
+  margin:38px auto 0;
+  max-width:920px;
+  height:330px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.25);
+  box-shadow:0 25px 70px rgba(0,0,0,.45);
+  background:
+    linear-gradient(rgba(7,21,47,.20),rgba(7,21,47,.45)),
+    url("BARRED ROCK B.jpg") center/cover no-repeat;
+  display:grid;
+  place-items:center;
+  color:#fff;
+  font-weight:700;
+  overflow:hidden;
+}
+  .hero-photo span{padding:12px 18px;border:1px dashed #647780;border-radius:12px;background:rgba(255,255,255,.55)}
 section{padding:80px 0}
 .section-head{text-align:center;margin-bottom:42px}
 .section-head h2{font-size:clamp(28px,4vw,44px);margin:0 0 12px;font-weight:900;display:inline-block;background:linear-gradient(90deg,#f4c84b,#fff,#aeb8c0,#f4c84b);background-size:240% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:metal 5s linear infinite;filter:drop-shadow(0 2px 7px rgba(255,210,80,.35))}
