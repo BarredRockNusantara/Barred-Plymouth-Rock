@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Barred Plymouth Rock Indonesia — sejarah, perkembangan, standar ras, perawatan, nutrisi, kandang, kesehatan, pembibitan, galeri, komunitas, dan referensi.">
+<title>Barred Plymouth Rock Indonesia</title>
+<style>
+:root{
+  --sky:#bfeeff;--sky2:#eefaff;--ink:#101820;--silver:#cbd3da;--silver2:#f7f9fb;
+  --green:#39c98a;--gold:#ffd34d;--red:#ff5d67;--dark:#0c1117;--dark2:#18212a;
+  --card:rgba(255,255,255,.88);--shadow:0 18px 45px rgba(16,24,32,.14);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:linear-gradient(180deg,var(--sky),#fff 22%,#eef5f8 100%);line-height:1.65}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+.container{width:min(1120px,92%);margin:auto}
+header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.82);backdrop-filter:blur(16px);border-bottom:1px solid rgba(120,140,150,.2)}
+.nav{min-height:72px;display:flex;align-items:center;gap:24px}
+.logo-slot{width:52px;height:52px;border:1.5px dashed #7e8b94;border-radius:15px;display:grid;place-items:center;color:#7e8b94;font-size:11px;flex:none}
+.nav-title{font-weight:800;letter-spacing:.4px;white-space:nowrap}
+nav{display:flex;gap:20px;overflow-x:auto;margin-left:auto}
+nav a{font-size:14px;font-weight:700;white-space:nowrap;padding:25px 0;color:#4d5962;position:relative}
+nav a:hover,nav a.active{color:#159b68}
+nav a.active:after{content:"";position:absolute;left:0;right:0;bottom:15px;height:2px;border-radius:4px;background:#159b68}
+.hero{padding:90px 0 100px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;border-radius:50%;filter:blur(2px);opacity:.35;pointer-events:none}
+.hero:before{width:280px;height:280px;background:#fff;right:-90px;top:20px}
+.hero:after{width:220px;height:220px;background:#8fe4c1;left:-100px;bottom:-80px}
+.hero-inner{position:relative;z-index:1;text-align:center}
+.kicker{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#52707d;font-weight:800}
+h1{font-size:clamp(34px,6vw,66px);line-height:1.08;margin:14px auto;max-width:850px;font-weight:900;background:linear-gradient(90deg,#23b878,#ffe04f,#ff5965,#23b878);background-size:300% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:rainbow 7s linear infinite,shine 2.8s ease-in-out infinite}
+@keyframes rainbow{to{background-position:300% center}}
+@keyframes shine{0%,100%{filter:drop-shadow(0 0 0 rgba(255,255,255,0))}50%{filter:drop-shadow(0 0 12px rgba(255,255,255,.9))}}
+.hero p{max-width:720px;margin:18px auto;color:#53636d;font-size:17px}
+.hero-photo{margin:38px auto 0;max-width:920px;height:330px;border-radius:30px;border:1px solid rgba(255,255,255,.9);box-shadow:var(--shadow);background:linear-gradient(135deg,#9edff3,#dff8ff 45%,#9dd7a9);display:grid;place-items:center;color:#52646e;font-weight:700}
+.hero-photo span{padding:12px 18px;border:1px dashed #647780;border-radius:12px;background:rgba(255,255,255,.55)}
+section{padding:80px 0}
+.section-head{text-align:center;margin-bottom:42px}
+.section-head h2{font-size:clamp(28px,4vw,44px);margin:0 0 12px;font-weight:900;display:inline-block;background:linear-gradient(90deg,#f4c84b,#fff,#aeb8c0,#f4c84b);background-size:240% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:metal 5s linear infinite;filter:drop-shadow(0 2px 7px rgba(255,210,80,.35))}
+@keyframes metal{to{background-position:240% center}}
+.section-head p{max-width:760px;margin:auto;color:#68757d}
+.story{background:linear-gradient(135deg,#f8fdff,#dceff6)}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:stretch}
+.photo-box{min-height:320px;border-radius:26px;border:1.5px dashed #8b9aa4;background:linear-gradient(145deg,#edf7fb,#d6e8ee);display:grid;place-items:center;color:#64737b;font-weight:800;text-align:center;padding:25px;box-shadow:var(--shadow)}
+.photo-box small{display:block;font-weight:500;margin-top:5px}
+.content-card{background:var(--card);padding:32px;border-radius:26px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.9)}
+.world{background:radial-gradient(circle at 20% 10%,#303b45,#0c1117 55%,#05080b);color:white}
+.world .section-head p{color:#b7c1c8}
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.gallery .photo-box{min-height:230px;background:linear-gradient(145deg,#232c34,#10161c);border-color:#74808a;color:#c8d0d5;box-shadow:0 12px 30px rgba(0,0,0,.3)}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:rgba(255,255,255,.9);border-radius:24px;padding:24px;box-shadow:var(--shadow);border:1px solid rgba(150,165,175,.22)}
+.card h3{margin:0 0 8px;font-size:19px}
+.card p{margin:0;color:#637079;font-size:14px}
+.card .mini-photo{height:150px;border-radius:17px;border:1.5px dashed #8a989f;background:linear-gradient(135deg,#eef5f7,#dbe7eb);display:grid;place-items:center;color:#75828a;font-size:13px;font-weight:800;margin-bottom:17px}
+.dark-section{background:linear-gradient(145deg,#111820,#252e36);color:#fff}
+.dark-section .section-head p{color:#c1c9cf}
+.dark-section .card{background:rgba(255,255,255,.08);border-color:rgba(255,255,255,.12);box-shadow:none}
+.dark-section .card p{color:#c1cbd0}
+.timeline{display:grid;gap:18px}
+.timeline .card{display:grid;grid-template-columns:90px 1fr;gap:20px;align-items:center}
+.age{font-weight:900;font-size:25px;color:#16a96e}
+.links{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.link-card{padding:22px;border-radius:20px;background:#fff;border:1px solid #dce4e8;box-shadow:0 10px 28px rgba(20,35,45,.08);font-weight:800}
+.link-card span{display:block;font-size:13px;color:#687780;font-weight:500;margin-top:4px}
+.community{background:linear-gradient(135deg,#e9fff5,#e9f7ff)}
+footer{background:#080d12;color:#b8c1c7;padding:48px 0}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:30px}
+footer h3{color:#fff;margin-top:0}
+footer a:hover{color:#fff}
+.top{display:inline-block;margin-top:25px;color:#fff;border-bottom:1px solid #82909a}
+@media(max-width:850px){
+ .nav{gap:12px}.nav-title{font-size:13px}nav{gap:15px}.split{grid-template-columns:1fr}.cards,.gallery,.links{grid-template-columns:1fr 1fr}.hero{padding:65px 0 70px}
+}
+@media(max-width:560px){
+ .logo-slot{width:44px;height:44px}.nav-title{display:none}nav{width:100%}.cards,.gallery,.links{grid-template-columns:1fr}.hero-photo{height:230px}.timeline .card{grid-template-columns:1fr}.section-head h2{font-size:30px}section{padding:62px 0}
+}
+
+/* NAVY ELEGANT UPDATE */
+body{background:#07152f;color:#eef4ff;}
+section,.story,.world,.community{background:linear-gradient(135deg,#07152f 0%,#0b1d3d 55%,#06132b 100%);}
+.card,.content-card,.link-card,.photo-box,.mini-photo{background:rgba(16,35,68,.72);border-color:rgba(255,255,255,.10);box-shadow:0 18px 50px rgba(0,0,0,.22);}
+.search-premium{position:relative;overflow:hidden;padding:34px;border:1px solid rgba(214,226,255,.16);border-radius:26px;background:linear-gradient(135deg,rgba(20,43,82,.95),rgba(7,21,47,.96));box-shadow:0 25px 70px rgba(0,0,0,.35);}
+.search-premium:before{content:"";position:absolute;width:260px;height:260px;right:-100px;top:-120px;border-radius:50%;background:rgba(110,170,255,.14);filter:blur(4px);}
+.search-label{letter-spacing:.18em;font-size:11px;color:#9fc4ff;font-weight:700;margin-bottom:10px;}
+.search-premium h3{position:relative;font-size:28px;margin:0 0 8px;color:#fff;}
+.search-premium p{position:relative;color:#b9c8df;margin:0 0 22px;}
+.search-premium form{position:relative;display:flex;gap:10px;max-width:760px;}
+.search-premium input{flex:1;min-width:0;padding:16px 18px;border-radius:14px;border:1px solid rgba(255,255,255,.15);background:rgba(255,255,255,.07);color:#fff;outline:none;font-size:15px;backdrop-filter:blur(10px);}
+.search-premium input::placeholder{color:#9eacc2;}
+.search-premium input:focus{border-color:rgba(159,196,255,.65);box-shadow:0 0 0 4px rgba(100,150,255,.10);}
+.search-premium button{border:0;border-radius:14px;padding:0 22px;background:linear-gradient(135deg,#dce9ff,#91baff);color:#07152f;font-weight:800;cursor:pointer;box-shadow:0 10px 30px rgba(120,170,255,.20);}
+footer{background:#050f22;}
+@media(max-width:650px){.search-premium{padding:25px 20px}.search-premium h3{font-size:23px}.search-premium form{flex-direction:column}.search-premium button{padding:15px 18px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="container nav">
+  <div class="logo-slot">LOGO</div>
+  <div class="nav-title">Barred Plymouth Rock</div>
+  <nav aria-label="Navigasi">
+    <a href="#beranda">Beranda</a><a href="#sejarah">Sejarah</a><a href="#dunia">Perkembangan</a>
+    <a href="#standar">Standar Ras</a><a href="#perawatan">Perawatan</a><a href="#pakan">Nutrisi & Pakan</a>
+    <a href="#kandang">Kandang</a><a href="#kesehatan">Kesehatan</a><a href="#pembibitan">Pembibitan</a>
+    <a href="#galeri">Galeri</a><a href="#komunitas">Komunitas</a><a href="#referensi">Referensi</a>
+  </nav>
+</div>
+</header>
+
+<main>
+<section id="beranda" class="hero">
+<div class="container hero-inner">
+  <div class="kicker">Breeding • Care • Information • Community</div>
+  <h1>Barred Plymouth Rock Indonesia</h1>
+  <p>Pusat informasi peternakan Barred Plymouth Rock yang dirancang modern, rapi, dan mudah dipelajari dari sejarah hingga pembibitan.</p>
+  <div class="hero-photo"><span>KOTAK FOTO UTAMA — masukkan foto peternakan sendiri</span></div>
+</div>
+</section>
+
+<section id="sejarah" class="story">
+<div class="container">
+ <div class="section-head"><h2>Sejarah Barred Plymouth Rock</h2><p>Mengenal perjalanan ras Barred Plymouth Rock dari Amerika Serikat.</p></div>
+ <div class="split">
+  <div class="photo-box">KOTAK FOTO SEJARAH<small>Foto dapat diganti sendiri</small></div>
+  <div class="content-card">
+   <h3>Awal Perjalanan</h3>
+   <p>Barred Plymouth Rock merupakan salah satu ras ayam yang berkembang di Amerika Serikat pada abad ke-19. Ras ini kemudian dikenal luas sebagai ayam serbaguna karena dimanfaatkan untuk produksi telur dan daging.</p>
+   <p>Bagian ini dapat dikembangkan lagi dengan dokumentasi sejarah, garis waktu, foto lama, dan sumber rujukan yang dipilih sendiri.</p>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="dunia" class="world">
+<div class="container">
+ <div class="section-head"><h2>Perkembangan Barred Plymouth Rock di Dunia</h2><p>Galeri perkembangan dan peternakan dari berbagai tempat. Tidak ada nama negara pada kotak foto agar tampilan tetap bersih.</p></div>
+ <div class="gallery">
+  <div class="photo-box">KOTAK FOTO 01</div><div class="photo-box">KOTAK FOTO 02</div><div class="photo-box">KOTAK FOTO 03</div>
+  <div class="photo-box">KOTAK FOTO 04</div><div class="photo-box">KOTAK FOTO 05</div><div class="photo-box">KOTAK FOTO 06</div>
+ </div>
+</div>
+</section>
+
+<section id="standar">
+<div class="container">
+ <div class="section-head"><h2>Standar Ras & Ciri-Ciri</h2><p>Kotak foto sengaja dikosongkan agar foto ayam milik sendiri dapat dimasukkan kemudian.</p></div>
+ <div class="cards">
+  <article class="card"><div class="mini-photo">FOTO: BENTUK TUBUH</div><h3>Bentuk Tubuh</h3><p>Ruang untuk menjelaskan struktur, proporsi, dan kesan tubuh khas ras.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: KEPALA</div><h3>Kepala</h3><p>Jelaskan ciri kepala dan bagian-bagiannya sesuai standar yang digunakan.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: MATA</div><h3>Mata</h3><p>Ruang dokumentasi dan penjelasan ciri mata.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: JENGGER</div><h3>Jengger</h3><p>Ruang untuk ciri jengger dan penilaian berdasarkan standar.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: PARUH</div><h3>Paruh</h3><p>Ruang untuk menjelaskan bentuk dan warna paruh.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: KAKI</div><h3>Kaki</h3><p>Ruang untuk menjelaskan struktur kaki dan karakter warna yang diamati.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: POLA WARNA</div><h3>Pola Warna</h3><p>Dokumentasi pola warna dan ciri khas yang menjadi identitas Barred Plymouth Rock.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: EKOR</div><h3>Ekor</h3><p>Ruang dokumentasi bentuk, posisi, dan keserasian ekor.</p></article>
+  <article class="card"><div class="mini-photo">FOTO: KARAKTER</div><h3>Karakter</h3><p>Ruang untuk mencatat perilaku, ketenangan, dan pengamatan harian.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="perawatan" class="dark-section">
+<div class="container">
+ <div class="section-head"><h2>Pusat Perawatan Barred Plymouth Rock</h2><p>Perawatan dibuat berdasarkan tahap kehidupan dan kebutuhan harian.</p></div>
+ <div class="cards">
+  <article class="card"><div class="mini-photo">FOTO DOC</div><h3>Perawatan DOC</h3><p>Fokus pada suhu, air minum bersih, pakan sesuai umur, alas kering, dan pemantauan kondisi.</p></article>
+  <article class="card"><div class="mini-photo">FOTO STARTER</div><h3>Fase Starter</h3><p>Perhatikan pertumbuhan, kepadatan, ventilasi, kebersihan, dan akses pakan serta air.</p></article>
+  <article class="card"><div class="mini-photo">FOTO GROWER</div><h3>Fase Grower</h3><p>Pantau perkembangan tubuh, konsumsi pakan, ruang gerak, dan kondisi bulu.</p></article>
+  <article class="card"><div class="mini-photo">FOTO DEWASA</div><h3>Ayam Dewasa</h3><p>Jaga konsistensi pakan, air, kandang, kebersihan, dan pengamatan perilaku.</p></article>
+  <article class="card"><div class="mini-photo">FOTO KEBERSIHAN</div><h3>Kebersihan Harian</h3><p>Kelola litter, tempat pakan, tempat minum, ventilasi, dan area sekitar kandang.</p></article>
+  <article class="card"><div class="mini-photo">FOTO PEMANTAUAN</div><h3>Pemantauan</h3><p>Catat makan, minum, berat, telur, perilaku, dan perubahan kondisi untuk evaluasi.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="pakan">
+<div class="container">
+ <div class="section-head"><h2>Pusat Nutrisi & Pakan</h2><p>Program pakan disusun berdasarkan tahap umur. Foto setiap bagian dapat diganti sendiri.</p></div>
+ <div class="timeline">
+  <article class="card"><div class="age">DOC</div><div><h3>Pakan DOC</h3><p>Pilih pakan starter yang sesuai umur dan sediakan air minum bersih setiap saat.</p></div></article>
+  <article class="card"><div class="age">1–4</div><div><h3>Starter</h3><p>Fokus pada nutrisi seimbang untuk pertumbuhan awal dan perkembangan kerangka.</p></div></article>
+  <article class="card"><div class="age">Grower</div><div><h3>Grower</h3><p>Sesuaikan pakan dengan pertumbuhan dan jangan mengabaikan kualitas air serta mineral.</p></div></article>
+  <article class="card"><div class="age">Layer</div><div><h3>Pakan Layer</h3><p>Untuk ayam yang memasuki fase produksi, gunakan ransum yang memang diformulasikan untuk produksi telur.</p></div></article>
+  <article class="card"><div class="age">Indukan</div><div><h3>Pakan Indukan</h3><p>Perhatikan kondisi tubuh, keseimbangan nutrisi, air minum, dan kualitas reproduksi.</p></div></article>
+ </div>
+ <div class="cards" style="margin-top:20px">
+  <article class="card"><div class="mini-photo">FOTO PAKAN TAMBAHAN</div><h3>Pakan Tambahan</h3><p>Tempat untuk dokumentasi bahan tambahan yang digunakan di peternakan.</p></article>
+  <article class="card"><div class="mini-photo">FOTO AIR MINUM</div><h3>Air & Mineral</h3><p>Tempat untuk menjelaskan manajemen air minum dan mineral sesuai kebutuhan.</p></article>
+  <article class="card"><div class="mini-photo">FOTO JADWAL</div><h3>Jadwal Pemberian</h3><p>Tempat memasukkan jadwal pakan versi peternakan sendiri.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="kandang" class="story">
+<div class="container">
+ <div class="section-head"><h2>Pusat Desain & Manajemen Kandang</h2><p>Kandang nyaman membantu menjaga kebersihan, sirkulasi udara, dan kemudahan perawatan.</p></div>
+ <div class="cards">
+  <article class="card"><div class="mini-photo">FOTO KANDANG</div><h3>Desain Kandang</h3><p>Ruang untuk foto kandang dan penjelasan tata letak.</p></article>
+  <article class="card"><div class="mini-photo">FOTO VENTILASI</div><h3>Ventilasi</h3><p>Ruang untuk menjelaskan aliran udara dan kondisi lingkungan kandang.</p></article>
+  <article class="card"><div class="mini-photo">FOTO PAKAN & MINUM</div><h3>Tempat Pakan & Minum</h3><p>Ruang untuk dokumentasi posisi dan pengelolaan peralatan.</p></article>
+  <article class="card"><div class="mini-photo">FOTO LITTER</div><h3>Alas Kandang</h3><p>Ruang untuk menjelaskan jenis alas, kekeringan, dan pengelolaannya.</p></article>
+  <article class="card"><div class="mini-photo">FOTO AREA LUAR</div><h3>Area Gerak</h3><p>Ruang untuk dokumentasi area aktivitas ayam.</p></article>
+  <article class="card"><div class="mini-photo">FOTO KEBERSIHAN</div><h3>Sanitasi</h3><p>Ruang untuk prosedur kebersihan dan pengelolaan kandang.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="kesehatan" class="dark-section">
+<div class="container">
+ <div class="section-head"><h2>Kesehatan & Biosekuriti</h2><p>Fokus pada pencegahan, pengamatan rutin, kebersihan, dan pencatatan.</p></div>
+ <div class="cards">
+  <article class="card"><div class="mini-photo">FOTO PEMERIKSAAN</div><h3>Pemantauan Harian</h3><p>Amati nafsu makan, minum, aktivitas, kotoran, pernapasan, dan perubahan perilaku.</p></article>
+  <article class="card"><div class="mini-photo">FOTO SANITASI</div><h3>Biosekuriti</h3><p>Batasi risiko masuknya penyakit melalui kebersihan, alat, orang, dan hewan dari luar.</p></article>
+  <article class="card"><div class="mini-photo">FOTO ISOLASI</div><h3>Pemisahan</h3><p>Ruang untuk prosedur pemisahan ayam yang menunjukkan tanda tidak normal.</p></article>
+  <article class="card"><div class="mini-photo">FOTO CATATAN</div><h3>Catatan Kesehatan</h3><p>Catat tanggal, gejala, tindakan, dan perkembangan untuk evaluasi.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="pembibitan">
+<div class="container">
+ <div class="section-head"><h2>Penetasan & Pembibitan</h2><p>Bagian untuk dokumentasi proses dari indukan hingga generasi berikutnya.</p></div>
+ <div class="cards">
+  <article class="card"><div class="mini-photo">FOTO INDUKAN</div><h3>Seleksi Indukan</h3><p>Catat identitas, asal, performa, dan tujuan pembiakan.</p></article>
+  <article class="card"><div class="mini-photo">FOTO TELUR</div><h3>Telur Tetas</h3><p>Ruang untuk dokumentasi pemilihan dan penyimpanan telur tetas.</p></article>
+  <article class="card"><div class="mini-photo">FOTO INKUBASI</div><h3>Inkubasi</h3><p>Ruang untuk catatan suhu, kelembapan, pembalikan, dan perkembangan telur.</p></article>
+  <article class="card"><div class="mini-photo">FOTO DOC BARU</div><h3>DOC Menetas</h3><p>Ruang untuk dokumentasi setelah menetas dan pemindahan ke brooder.</p></article>
+  <article class="card"><div class="mini-photo">FOTO SELEKSI</div><h3>Seleksi Anakan</h3><p>Ruang untuk pencatatan perkembangan dan seleksi berdasarkan tujuan breeding.</p></article>
+  <article class="card"><div class="mini-photo">FOTO SILSILAH</div><h3>Catatan Trah</h3><p>Ruang untuk membuat silsilah dan riwayat breeding secara teratur.</p></article>
+ </div>
+</div>
+</section>
+
+<section id="galeri" class="world">
+<div class="container">
+ <div class="section-head"><h2>Galeri Peternakan</h2><p>Koleksi foto milik sendiri: jantan, betina, DOC, telur, kandang, dan aktivitas peternakan.</p></div>
+ <div class="gallery">
+  <div class="photo-box">JANTAN</div><div class="photo-box">BETINA</div><div class="photo-box">DOC</div>
+  <div class="photo-box">TELUR</div><div class="photo-box">KANDANG</div><div class="photo-box">AKTIVITAS</div>
+ </div>
+</div>
+</section>
+
+<section id="komunitas" class="community">
+<div class="container">
+ <div class="section-head"><h2>Komunitas</h2><p>Tempat untuk memasukkan link komunitas yang nanti diberikan sendiri.</p></div>
+ <div class="links">
+  <a class="link-card" href="#" onclick="return false;">Komunitas Facebook<span>LINK AKAN DIISI</span></a>
+  <a class="link-card" href="#" onclick="return false;">Instagram<span>LINK AKAN DIISI</span></a>
+  <a class="link-card" href="#" onclick="return false;">TikTok<span>LINK AKAN DIISI</span></a>
+ </div>
+</div>
+</section>
+
+<section id="referensi">
+<div class="container">
+ <div class="section-head"><h2>Sumber & Referensi</h2><p>Tambahkan tautan sumber terpercaya agar pembaca dapat melakukan pencarian lebih luas.</p></div>
+ <div class="links">
+  <a class="link-card" href="https://www.amerpoultryassn.com/" target="_blank" rel="noopener">American Poultry Association<span>Situs organisasi perunggasan — tambahkan referensi lain sesuai kebutuhan.</span></a>
+  <a class="link-card" href="https://www.fao.org/" target="_blank" rel="noopener">FAO<span>Informasi pertanian dan peternakan internasional.</span></a>
+  <div class="search-premium"><div class="search-label">PENCARIAN INFORMASI</div><h3>Jelajahi Pengetahuan Barred Plymouth Rock</h3><p>Cari informasi lebih luas melalui mesin pencarian terpercaya.</p><form action="https://www.google.com/search" method="get" target="_blank"><input name="q" type="search" placeholder="Ketik yang ingin dicari…" aria-label="Pencarian"><button type="submit">Cari Informasi →</button></form></div>
+ </div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="container footer-grid">
+ <div><h3>Barred Plymouth Rock Indonesia</h3><p>Breeding • Care • Information • Community</p><p>Website ini dirancang agar foto, logo, komunitas, dan informasi peternakan dapat dikembangkan sendiri.</p></div>
+ <div><h3>Navigasi</h3><p><a href="#beranda">Beranda</a></p><p><a href="#sejarah">Sejarah</a></p><p><a href="#pakan">Nutrisi & Pakan</a></p></div>
+ <div><h3>Komunitas</h3><p><a href="#komunitas">Link Komunitas</a></p><p><a href="#referensi">Referensi</a></p><p></p></div>
+</div>
+<div class="container"><a class="top" href="#beranda">↑ Kembali ke atas</a></div>
+</footer>
+
+<script>
+const links=[...document.querySelectorAll('nav a')];
+const sections=[...document.querySelectorAll('main section[id]')];
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(e=>{
+  if(e.isIntersecting){
+   links.forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id));
+  }
+ });
+},{rootMargin:'-35% 0px -55% 0px',threshold:0});
+sections.forEach(s=>observer.observe(s));
+</script>
+</body>
+</html>
