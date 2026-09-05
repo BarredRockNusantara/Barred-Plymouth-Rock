@@ -1,4 +1,1010 @@
-<!DOCTYPE html><html lang="id">
+/* =========================================================
+BARREDROCK NUSANTARA — PART 2
+EXTREME LUXURY EXPERIENCE
+========================================================= */
+
+/* ================= PREMIUM PRELOADER ================= */
+
+#luxury-loader{
+position:fixed;
+inset:0;
+z-index:99999;
+
+background:#050505;
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+overflow:hidden;
+
+transition:
+opacity 1s ease,
+visibility 1s ease;
+
+}
+
+.loader-hidden{
+opacity:0;
+visibility:hidden;
+}
+
+.loader-content{
+text-align:center;
+position:relative;
+z-index:2;
+}
+
+.loader-symbol{
+width:110px;
+height:110px;
+
+margin:0 auto 30px;
+
+border-radius:50%;
+
+border:1px solid rgba(214,174,85,.5);
+
+display:flex;
+align-items:center;
+justify-content:center;
+
+font-size:50px;
+
+animation:
+loaderPulse 2s infinite ease-in-out;
+
+}
+
+.loader-title{
+color:#d6ae55;
+
+font-size:clamp(28px,5vw,55px);
+
+letter-spacing:12px;
+
+font-weight:800;
+
+margin-bottom:12px;
+
+}
+
+.loader-subtitle{
+color:#777;
+
+font-size:10px;
+
+letter-spacing:5px;
+
+text-transform:uppercase;
+
+}
+
+.loader-line{
+width:260px;
+height:1px;
+
+background:#222;
+
+margin:35px auto 0;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.loader-line::before{
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:100%;
+height:100%;
+
+background:#d6ae55;
+
+animation:loadingLine 2s ease forwards;
+
+}
+
+.loader-bg-circle{
+position:absolute;
+
+width:800px;
+height:800px;
+
+border-radius:50%;
+
+border:1px solid rgba(214,174,85,.08);
+
+animation:rotateSlow 30s linear infinite;
+
+}
+
+.loader-bg-circle::before{
+content:"";
+
+position:absolute;
+
+inset:100px;
+
+border-radius:50%;
+
+border:1px dashed rgba(214,174,85,.08);
+
+}
+
+@keyframes loaderPulse{
+
+0%{
+    transform:scale(.9);
+    box-shadow:0 0 0 rgba(214,174,85,0);
+}
+
+50%{
+    transform:scale(1.05);
+    box-shadow:0 0 60px rgba(214,174,85,.25);
+}
+
+100%{
+    transform:scale(.9);
+    box-shadow:0 0 0 rgba(214,174,85,0);
+}
+
+}
+
+@keyframes loadingLine{
+
+from{
+    left:-100%;
+}
+
+to{
+    left:100%;
+}
+
+}
+
+/* ================= SCROLL PROGRESS ================= */
+
+#scroll-progress{
+
+position:fixed;
+
+top:0;
+left:0;
+
+height:2px;
+
+width:0%;
+
+z-index:100000;
+
+background:
+linear-gradient(
+    90deg,
+    #9c762d,
+    #f0d48b,
+    #ffffff,
+    #d6ae55
+);
+
+box-shadow:
+0 0 20px rgba(214,174,85,.8);
+
+}
+
+/* ================= CURSOR GLOW ================= */
+
+.cursor-glow{
+
+position:fixed;
+
+width:400px;
+height:400px;
+
+pointer-events:none;
+
+border-radius:50%;
+
+transform:translate(-50%,-50%);
+
+background:
+radial-gradient(
+    circle,
+    rgba(214,174,85,.08),
+    transparent 65%
+);
+
+z-index:0;
+
+transition:
+width .2s ease,
+height .2s ease;
+
+}
+
+/* ================= MOBILE LUXURY MENU ================= */
+
+.mobile-menu{
+
+position:fixed;
+
+inset:0;
+
+z-index:9999;
+
+background:
+radial-gradient(
+    circle at center,
+    rgba(214,174,85,.08),
+    transparent 60%
+),
+#070707;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.5s ease;
+
+}
+
+.mobile-menu.active{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.mobile-menu ul{
+
+list-style:none;
+
+text-align:center;
+
+}
+
+.mobile-menu li{
+
+margin:22px 0;
+
+transform:translateY(30px);
+
+opacity:0;
+
+transition:.5s ease;
+
+}
+
+.mobile-menu.active li{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+.mobile-menu a{
+
+font-size:clamp(30px,9vw,70px);
+
+font-weight:bold;
+
+letter-spacing:3px;
+
+color:#fff;
+
+text-transform:uppercase;
+
+transition:.3s;
+
+}
+
+.mobile-menu a:hover{
+
+color:#d6ae55;
+
+letter-spacing:8px;
+
+}
+
+.mobile-close{
+
+position:absolute;
+
+top:30px;
+
+right:7%;
+
+font-size:35px;
+
+color:#d6ae55;
+
+cursor:pointer;
+
+}
+
+/* ================= MARQUEE ================= */
+
+.marquee-section{
+
+padding:30px 0;
+
+overflow:hidden;
+
+border-top:1px solid rgba(214,174,85,.15);
+
+border-bottom:1px solid rgba(214,174,85,.15);
+
+background:#0b0b0b;
+
+}
+
+.marquee-track{
+
+display:flex;
+
+width:max-content;
+
+animation:marqueeMove 25s linear infinite;
+
+}
+
+.marquee-item{
+
+display:flex;
+
+align-items:center;
+
+white-space:nowrap;
+
+font-size:clamp(22px,3vw,50px);
+
+font-weight:bold;
+
+letter-spacing:4px;
+
+color:#222;
+
+-webkit-text-stroke:1px rgba(214,174,85,.6);
+
+padding-right:50px;
+
+}
+
+.marquee-star{
+
+color:#d6ae55;
+
+margin-right:50px;
+
+}
+
+@keyframes marqueeMove{
+
+from{
+    transform:translateX(0);
+}
+
+to{
+    transform:translateX(-50%);
+}
+
+}
+
+/* ================= BREEDING SHOWCASE ================= */
+
+.breeding-showcase{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+min-height:850px;
+
+margin-top:80px;
+
+border:1px solid rgba(214,174,85,.18);
+
+}
+
+.breeding-image-side{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.breeding-image-side img{
+
+width:100%;
+height:100%;
+
+object-fit:cover;
+
+position:absolute;
+
+inset:0;
+
+transition:2s ease;
+
+}
+
+.breeding-image-side:hover img{
+
+transform:scale(1.08);
+
+}
+
+.breeding-image-side::after{
+
+content:"";
+
+position:absolute;
+
+inset:0;
+
+background:
+linear-gradient(
+    90deg,
+    transparent,
+    rgba(8,8,8,.5)
+);
+
+}
+
+.breeding-number-large{
+
+position:absolute;
+
+z-index:2;
+
+top:40px;
+left:40px;
+
+font-size:clamp(70px,10vw,180px);
+
+color:transparent;
+
+-webkit-text-stroke:1px rgba(255,255,255,.35);
+
+font-weight:bold;
+
+}
+
+.breeding-info-side{
+
+padding:clamp(40px,7vw,100px);
+
+display:flex;
+
+justify-content:center;
+
+flex-direction:column;
+
+background:
+radial-gradient(
+    circle at bottom right,
+    rgba(214,174,85,.08),
+    transparent 40%
+);
+
+}
+
+.breeding-info-side h2{
+
+font-size:clamp(45px,6vw,90px);
+
+line-height:.95;
+
+margin-bottom:35px;
+
+}
+
+.breeding-info-side h2 span{
+
+color:#d6ae55;
+
+}
+
+.breeding-info-side p{
+
+color:#999;
+
+line-height:2;
+
+margin-bottom:40px;
+
+}
+
+.breeding-specs{
+
+display:flex;
+
+flex-direction:column;
+
+gap:0;
+
+}
+
+.breeding-spec{
+
+display:grid;
+
+grid-template-columns:80px 1fr auto;
+
+align-items:center;
+
+gap:20px;
+
+padding:20px 0;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+}
+
+.breeding-spec-number{
+
+color:#d6ae55;
+
+font-size:12px;
+
+letter-spacing:2px;
+
+}
+
+.breeding-spec-title{
+
+font-size:14px;
+
+letter-spacing:1px;
+
+}
+
+.breeding-spec-plus{
+
+color:#d6ae55;
+
+font-size:22px;
+
+}
+
+/* ================= TESTIMONIAL ================= */
+
+.testimonial-section{
+
+padding:140px 8%;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.testimonial-wrapper{
+
+max-width:1100px;
+
+margin:80px auto 0;
+
+position:relative;
+
+}
+
+.testimonial-card{
+
+display:none;
+
+min-height:430px;
+
+padding:clamp(40px,7vw,100px);
+
+border:1px solid rgba(214,174,85,.2);
+
+background:
+linear-gradient(
+    135deg,
+    rgba(214,174,85,.06),
+    rgba(255,255,255,.015)
+);
+
+}
+
+.testimonial-card.active{
+
+display:block;
+
+animation:fadeSlide .8s ease;
+
+}
+
+.testimonial-quote{
+
+color:#d6ae55;
+
+font-size:80px;
+
+line-height:.5;
+
+margin-bottom:30px;
+
+}
+
+.testimonial-text{
+
+font-size:clamp(22px,3vw,42px);
+
+line-height:1.5;
+
+color:#e0e0e0;
+
+max-width:900px;
+
+}
+
+.testimonial-author{
+
+margin-top:45px;
+
+}
+
+.testimonial-author strong{
+
+display:block;
+
+color:#d6ae55;
+
+letter-spacing:2px;
+
+font-size:13px;
+
+}
+
+.testimonial-author span{
+
+display:block;
+
+margin-top:8px;
+
+color:#777;
+
+font-size:10px;
+
+letter-spacing:2px;
+
+}
+
+.testimonial-controls{
+
+display:flex;
+
+gap:12px;
+
+margin-top:25px;
+
+}
+
+.testimonial-dot{
+
+width:45px;
+
+height:2px;
+
+border:none;
+
+background:#333;
+
+cursor:pointer;
+
+}
+
+.testimonial-dot.active{
+
+background:#d6ae55;
+
+}
+
+@keyframes fadeSlide{
+
+from{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+}
+
+to{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+}
+
+/* ================= FAQ ================= */
+
+.faq-container{
+
+max-width:1000px;
+
+margin:70px auto 0;
+
+}
+
+.faq-item{
+
+border-top:1px solid rgba(255,255,255,.1);
+
+}
+
+.faq-question{
+
+width:100%;
+
+padding:28px 0;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:none;
+
+border:none;
+
+color:#fff;
+
+text-align:left;
+
+cursor:pointer;
+
+font-size:clamp(17px,2vw,24px);
+
+}
+
+.faq-question span{
+
+color:#d6ae55;
+
+font-size:30px;
+
+transition:.4s;
+
+}
+
+.faq-answer{
+
+max-height:0;
+
+overflow:hidden;
+
+transition:max-height .5s ease;
+
+}
+
+.faq-answer p{
+
+padding:0 0 30px;
+
+max-width:800px;
+
+color:#999;
+
+line-height:1.9;
+
+}
+
+.faq-item.active .faq-answer{
+
+max-height:300px;
+
+}
+
+.faq-item.active .faq-question span{
+
+transform:rotate(45deg);
+
+}
+
+/* ================= LIGHTBOX ================= */
+
+#gallery-lightbox{
+
+position:fixed;
+
+inset:0;
+
+z-index:10000;
+
+background:rgba(0,0,0,.96);
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+padding:30px;
+
+opacity:0;
+
+visibility:hidden;
+
+transition:.4s;
+
+}
+
+#gallery-lightbox.active{
+
+opacity:1;
+
+visibility:visible;
+
+}
+
+.lightbox-image{
+
+max-width:90vw;
+
+max-height:85vh;
+
+border:1px solid rgba(214,174,85,.4);
+
+box-shadow:
+0 30px 120px rgba(0,0,0,.9);
+
+}
+
+.lightbox-close{
+
+position:absolute;
+
+top:25px;
+right:5%;
+
+color:#d6ae55;
+
+font-size:40px;
+
+cursor:pointer;
+
+}
+
+.lightbox-caption{
+
+position:absolute;
+
+bottom:30px;
+
+color:#aaa;
+
+font-size:11px;
+
+letter-spacing:3px;
+
+text-transform:uppercase;
+
+}
+
+/* ================= AMBIENT DECORATION ================= */
+
+.gold-orb{
+
+position:absolute;
+
+width:500px;
+height:500px;
+
+border-radius:50%;
+
+filter:blur(100px);
+
+opacity:.08;
+
+pointer-events:none;
+
+}
+
+.gold-orb.one{
+
+top:10%;
+left:-300px;
+
+background:#d6ae55;
+
+}
+
+.gold-orb.two{
+
+bottom:10%;
+right:-300px;
+
+background:#d6ae55;
+
+}
+
+/* ================= RESPONSIVE PART 2 ================= */
+
+@media(max-width:900px){
+
+.breeding-showcase{
+
+    grid-template-columns:1fr;
+
+}
+
+.breeding-image-side{
+
+    min-height:600px;
+
+}
+
+.breeding-info-side{
+
+    padding:60px 35px;
+
+}
+
+}
+
+@media(max-width:760px){
+
+.cursor-glow{
+
+    display:none;
+
+}
+
+.breeding-image-side{
+
+    min-height:450px;
+
+}
+
+.testimonial-section{
+
+    padding:100px 6%;
+
+}
+
+.testimonial-card{
+
+    padding:45px 30px;
+
+}
+
+.loader-title{
+
+    letter-spacing:5px;
+
+}
+
+.breeding-spec{
+
+    grid-template-columns:55px 1fr auto;
+
+    gap:10px;
+
+}
+
+}<!DOCTYPE html><html lang="id">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>BarredRock Nusantara | Premium Barred Plymouth Rock</title><meta name="description" content="BarredRock Nusantara - Peternakan dan komunitas Barred Plymouth Rock premium Indonesia."><style>
